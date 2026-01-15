@@ -1,5 +1,7 @@
 ﻿Public Class Form2
 
+    Public DiscountRate As Decimal = 0D
+
     Dim tuitionFee As Decimal = 6000D
     Dim booksFee As Decimal = 3500D
     Dim uniformFee As Decimal = 450D
@@ -20,28 +22,56 @@
     Private Sub CalculateTotal()
         Dim total As Decimal = 0D
 
+
         If CheckBox1.Checked Then
-            total += tuitionFee * GetQty(ComboBox1)
+            Dim rowTotal = tuitionFee * GetQty(ComboBox1)
+            Label26.Text = "₱" & rowTotal.ToString("N2")
+            total += rowTotal
+        Else
+            Label26.Text = "₱0.00"
         End If
+
 
         If CheckBox2.Checked Then
-            total += booksFee * GetQty(ComboBox3)
+            Dim rowTotal = booksFee * GetQty(ComboBox3)
+            Label27.Text = "₱" & rowTotal.ToString("N2")
+            total += rowTotal
+        Else
+            Label27.Text = "₱0.00"
         End If
+
 
         If CheckBox3.Checked Then
-            total += uniformFee * GetQty(ComboBox4)
+            Dim rowTotal = uniformFee * GetQty(ComboBox4)
+            Label28.Text = "₱" & rowTotal.ToString("N2")
+            total += rowTotal
+        Else
+            Label28.Text = "₱0.00"
         End If
+
 
         If CheckBox4.Checked Then
-            total += peAttireFee * GetQty(ComboBox5)
+            Dim rowTotal = peAttireFee * GetQty(ComboBox5)
+            Label29.Text = "₱" & rowTotal.ToString("N2")
+            total += rowTotal
+        Else
+            Label29.Text = "₱0.00"
         End If
+
 
         If CheckBox5.Checked Then
-            total += schoolServiceFee * GetQty(ComboBox2)
+            Dim rowTotal = schoolServiceFee * GetQty(ComboBox2)
+            Label30.Text = "₱" & rowTotal.ToString("N2")
+            total += rowTotal
+        Else
+            Label30.Text = "₱0.00"
         End If
 
-        Label31.Text = "₱" & total.ToString("N2")
+        Dim discountedTotal As Decimal = total - (total * DiscountRate)
+
+        Label31.Text = "₱" & discountedTotal.ToString("N2")
     End Sub
+
 
     Private Sub UpdateComboStates()
         ComboBox1.Enabled = CheckBox1.Checked
@@ -61,7 +91,7 @@
         If CheckBox2.Checked Then
             ComboBox2.SelectedItem = 1
         Else
-            ComboBox2.SelectedIndex = 0 ' Select / N/A
+            ComboBox2.SelectedIndex = 0
         End If
 
         UpdateComboStates()
@@ -70,14 +100,13 @@
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Display prices
         Label21.Text = "₱" & tuitionFee.ToString("N2")
         Label22.Text = "₱" & booksFee.ToString("N2")
         Label23.Text = "₱" & uniformFee.ToString("N2")
         Label24.Text = "₱" & peAttireFee.ToString("N2")
         Label25.Text = "₱" & schoolServiceFee.ToString("N2")
 
-        ' Default selection (Select / N/A / 1)
+
         ComboBox1.SelectedIndex = 0
         ComboBox2.SelectedIndex = 0
         ComboBox3.SelectedIndex = 0
@@ -103,4 +132,35 @@
         CalculateTotal()
     End Sub
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Me.Hide()
+        Form3.Show()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Me.Hide()
+        Form4.Show()
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        MessageBox.Show(
+    "Not working.",
+    "Error",
+    MessageBoxButtons.OK,
+    MessageBoxIcon.Error
+    )
+    End Sub
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        MessageBox.Show(
+        "Not working.",
+        "Error",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Error
+    )
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Form5.Show()
+    End Sub
 End Class
