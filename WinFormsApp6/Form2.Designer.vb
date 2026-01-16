@@ -54,6 +54,8 @@ Partial Class Form2
         Panel19 = New Panel()
         Label16 = New Label()
         TableLayoutPanel1 = New TableLayoutPanel()
+        Panel41 = New Panel()
+        Label33 = New Label()
         Panel37 = New Panel()
         CheckBox5 = New CheckBox()
         Panel36 = New Panel()
@@ -131,6 +133,7 @@ Partial Class Form2
         Panel30.SuspendLayout()
         Panel19.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
+        Panel41.SuspendLayout()
         Panel37.SuspendLayout()
         Panel36.SuspendLayout()
         Panel35.SuspendLayout()
@@ -378,10 +381,10 @@ Partial Class Form2
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label30.Location = New Point(77, 30)
+        Label30.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label30.Location = New Point(70, 30)
         Label30.Name = "Label30"
-        Label30.Size = New Size(69, 15)
+        Label30.Size = New Size(101, 21)
         Label30.TabIndex = 16
         Label30.Text = "Placeholder"
         ' 
@@ -396,10 +399,10 @@ Partial Class Form2
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label29.Location = New Point(77, 30)
+        Label29.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label29.Location = New Point(70, 30)
         Label29.Name = "Label29"
-        Label29.Size = New Size(69, 15)
+        Label29.Size = New Size(101, 21)
         Label29.TabIndex = 16
         Label29.Text = "Placeholder"
         ' 
@@ -414,10 +417,10 @@ Partial Class Form2
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label28.Location = New Point(77, 30)
+        Label28.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label28.Location = New Point(70, 30)
         Label28.Name = "Label28"
-        Label28.Size = New Size(69, 15)
+        Label28.Size = New Size(101, 21)
         Label28.TabIndex = 16
         Label28.Text = "Placeholder"
         ' 
@@ -432,10 +435,10 @@ Partial Class Form2
         ' Label27
         ' 
         Label27.AutoSize = True
-        Label27.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label27.Location = New Point(77, 30)
+        Label27.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label27.Location = New Point(70, 30)
         Label27.Name = "Label27"
-        Label27.Size = New Size(69, 15)
+        Label27.Size = New Size(101, 21)
         Label27.TabIndex = 16
         Label27.Text = "Placeholder"
         ' 
@@ -450,10 +453,10 @@ Partial Class Form2
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label26.Location = New Point(77, 30)
+        Label26.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label26.Location = New Point(70, 30)
         Label26.Name = "Label26"
-        Label26.Size = New Size(69, 15)
+        Label26.Size = New Size(101, 21)
         Label26.TabIndex = 16
         Label26.Text = "Placeholder"
         ' 
@@ -484,6 +487,7 @@ Partial Class Form2
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51.38889F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 99F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 226F))
+        TableLayoutPanel1.Controls.Add(Panel41, 0, 0)
         TableLayoutPanel1.Controls.Add(Panel37, 2, 5)
         TableLayoutPanel1.Controls.Add(Panel36, 2, 4)
         TableLayoutPanel1.Controls.Add(Panel35, 2, 3)
@@ -519,6 +523,24 @@ Partial Class Form2
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 85F))
         TableLayoutPanel1.Size = New Size(831, 506)
         TableLayoutPanel1.TabIndex = 10
+        ' 
+        ' Panel41
+        ' 
+        Panel41.Controls.Add(Label33)
+        Panel41.Location = New Point(5, 5)
+        Panel41.Name = "Panel41"
+        Panel41.Size = New Size(233, 68)
+        Panel41.TabIndex = 21
+        ' 
+        ' Label33
+        ' 
+        Label33.AutoSize = True
+        Label33.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label33.Location = New Point(68, 23)
+        Label33.Name = "Label33"
+        Label33.Size = New Size(122, 25)
+        Label33.TabIndex = 1
+        Label33.Text = "Placeholder"
         ' 
         ' Panel37
         ' 
@@ -636,10 +658,10 @@ Partial Class Form2
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label25.Location = New Point(82, 30)
+        Label25.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        Label25.Location = New Point(80, 26)
         Label25.Name = "Label25"
-        Label25.Size = New Size(69, 15)
+        Label25.Size = New Size(96, 21)
         Label25.TabIndex = 16
         Label25.Text = "Placeholder"
         ' 
@@ -654,10 +676,10 @@ Partial Class Form2
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label24.Location = New Point(82, 30)
+        Label24.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        Label24.Location = New Point(80, 26)
         Label24.Name = "Label24"
-        Label24.Size = New Size(69, 15)
+        Label24.Size = New Size(96, 21)
         Label24.TabIndex = 16
         Label24.Text = "Placeholder"
         ' 
@@ -672,10 +694,10 @@ Partial Class Form2
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label23.Location = New Point(82, 30)
+        Label23.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        Label23.Location = New Point(80, 26)
         Label23.Name = "Label23"
-        Label23.Size = New Size(69, 15)
+        Label23.Size = New Size(96, 21)
         Label23.TabIndex = 16
         Label23.Text = "Placeholder"
         ' 
@@ -733,9 +755,11 @@ Partial Class Form2
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.Image = My.Resources.Resources.Screenshot_2026_01_13_081746_removebg_preview_school
         PictureBox2.Location = New Point(94, 3)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(39, 39)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
         ' 
@@ -760,9 +784,11 @@ Partial Class Form2
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.Image = My.Resources.Resources.Screenshot_2026_01_13_082157_removebg_preview_book
         PictureBox3.Location = New Point(94, 3)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(39, 39)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 2
         PictureBox3.TabStop = False
         ' 
@@ -787,9 +813,11 @@ Partial Class Form2
         ' 
         ' PictureBox5
         ' 
+        PictureBox5.Image = My.Resources.Resources.Screenshot_2026_01_13_082231_removebg_preview_uniform2
         PictureBox5.Location = New Point(94, 5)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(39, 39)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox5.TabIndex = 2
         PictureBox5.TabStop = False
         ' 
@@ -797,11 +825,11 @@ Partial Class Form2
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(40, 47)
+        Label18.Location = New Point(68, 47)
         Label18.Name = "Label18"
-        Label18.Size = New Size(147, 15)
+        Label18.Size = New Size(72, 15)
         Label18.TabIndex = 1
-        Label18.Text = "Elementary Polo Uniform"
+        Label18.Text = "Placeholder"
         ' 
         ' Panel13
         ' 
@@ -814,9 +842,11 @@ Partial Class Form2
         ' 
         ' PictureBox6
         ' 
-        PictureBox6.Location = New Point(94, 3)
+        PictureBox6.Image = My.Resources.Resources.Screenshot_2026_01_13_082722_removebg_preview_attire
+        PictureBox6.Location = New Point(90, 3)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(39, 39)
+        PictureBox6.Size = New Size(48, 39)
+        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox6.TabIndex = 3
         PictureBox6.TabStop = False
         ' 
@@ -841,9 +871,11 @@ Partial Class Form2
         ' 
         ' PictureBox7
         ' 
-        PictureBox7.Location = New Point(94, 3)
+        PictureBox7.Image = My.Resources.Resources.Screenshot_2026_01_13_082754_removebg_preview_bus
+        PictureBox7.Location = New Point(87, 8)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(39, 39)
+        PictureBox7.Size = New Size(60, 29)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox7.TabIndex = 4
         PictureBox7.TabStop = False
         ' 
@@ -862,7 +894,7 @@ Partial Class Form2
         Panel7.Controls.Add(Label3)
         Panel7.Location = New Point(248, 5)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(239, 68)
+        Panel7.Size = New Size(233, 68)
         Panel7.TabIndex = 6
         ' 
         ' Label3
@@ -904,10 +936,10 @@ Partial Class Form2
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(79, 36)
+        Label21.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label21.Location = New Point(80, 30)
         Label21.Name = "Label21"
-        Label21.Size = New Size(69, 15)
+        Label21.Size = New Size(96, 21)
         Label21.TabIndex = 15
         Label21.Text = "Placeholder"
         ' 
@@ -922,10 +954,10 @@ Partial Class Form2
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(82, 30)
+        Label22.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        Label22.Location = New Point(80, 26)
         Label22.Name = "Label22"
-        Label22.Size = New Size(69, 15)
+        Label22.Size = New Size(96, 21)
         Label22.TabIndex = 16
         Label22.Text = "Placeholder"
         ' 
@@ -1008,7 +1040,7 @@ Partial Class Form2
         Label2.Name = "Label2"
         Label2.Size = New Size(473, 21)
         Label2.TabIndex = 13
-        Label2.Text = "Pay Online > Elementary > Student Registration > Assessed Payments"
+        Label2.Text = "Pay Online > Student Registration > Elementary > Assessed Payments"
         ' 
         ' Label1
         ' 
@@ -1037,7 +1069,7 @@ Partial Class Form2
         Label31.AutoSize = True
         Label31.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.Black
-        Label31.Location = New Point(62, 26)
+        Label31.Location = New Point(70, 26)
         Label31.Name = "Label31"
         Label31.Size = New Size(102, 21)
         Label31.TabIndex = 17
@@ -1129,6 +1161,8 @@ Partial Class Form2
         Panel19.ResumeLayout(False)
         Panel19.PerformLayout()
         TableLayoutPanel1.ResumeLayout(False)
+        Panel41.ResumeLayout(False)
+        Panel41.PerformLayout()
         Panel37.ResumeLayout(False)
         Panel37.PerformLayout()
         Panel36.ResumeLayout(False)
@@ -1244,7 +1278,6 @@ Partial Class Form2
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
@@ -1273,4 +1306,7 @@ Partial Class Form2
     Friend WithEvents Label32 As Label
     Friend WithEvents Panel39 As Panel
     Friend WithEvents Panel40 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Panel41 As Panel
+    Friend WithEvents Label33 As Label
 End Class

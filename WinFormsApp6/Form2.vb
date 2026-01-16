@@ -82,11 +82,7 @@
     End Sub
 
     Private Sub CheckBoxes_CheckedChanged(sender As Object, e As EventArgs) _
-    Handles CheckBox1.CheckedChanged,
-            CheckBox2.CheckedChanged,
-            CheckBox3.CheckedChanged,
-            CheckBox4.CheckedChanged,
-            CheckBox5.CheckedChanged
+    Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged, CheckBox3.CheckedChanged, CheckBox4.CheckedChanged, CheckBox5.CheckedChanged
 
         If CheckBox2.Checked Then
             ComboBox2.SelectedItem = 1

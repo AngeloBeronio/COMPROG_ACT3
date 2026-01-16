@@ -173,9 +173,10 @@ Partial Class Form3
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources.Screenshot_2026_01_15_134254
-        PictureBox2.Location = New Point(969, 140)
+        PictureBox2.Location = New Point(1050, 140)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(936, 359)
+        PictureBox2.Size = New Size(855, 433)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 15
         PictureBox2.TabStop = False
         ' 
@@ -185,7 +186,7 @@ Partial Class Form3
         Panel6.Controls.Add(PictureBox4)
         Panel6.Controls.Add(Label11)
         Panel6.Controls.Add(Label10)
-        Panel6.Location = New Point(1, 966)
+        Panel6.Location = New Point(1, 928)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(1920, 100)
         Panel6.TabIndex = 9
@@ -231,7 +232,7 @@ Partial Class Form3
         Panel7.Controls.Add(Label1)
         Panel7.Location = New Point(1, 143)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(970, 356)
+        Panel7.Size = New Size(1052, 430)
         Panel7.TabIndex = 16
         ' 
         ' Button2
@@ -239,7 +240,7 @@ Partial Class Form3
         Button2.BackColor = Color.DarkGray
         Button2.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(484, 217)
+        Button2.Location = New Point(484, 262)
         Button2.Name = "Button2"
         Button2.Size = New Size(196, 69)
         Button2.TabIndex = 21
@@ -251,7 +252,7 @@ Partial Class Form3
         Button1.BackColor = Color.DodgerBlue
         Button1.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(165, 217)
+        Button1.Location = New Point(165, 262)
         Button1.Name = "Button1"
         Button1.Size = New Size(273, 69)
         Button1.TabIndex = 20
@@ -261,33 +262,33 @@ Partial Class Form3
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         Label3.ForeColor = Color.Navy
-        Label3.Location = New Point(165, 148)
+        Label3.Location = New Point(165, 164)
         Label3.Name = "Label3"
-        Label3.Size = New Size(187, 37)
+        Label3.Size = New Size(219, 45)
         Label3.TabIndex = 19
         Label3.Text = "with success" & ChrW(8221)
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         Label2.ForeColor = Color.Navy
-        Label2.Location = New Point(165, 111)
+        Label2.Location = New Point(165, 119)
         Label2.Name = "Label2"
-        Label2.Size = New Size(496, 37)
+        Label2.Size = New Size(583, 45)
         Label2.TabIndex = 18
         Label2.Text = "He will direct and crown your efforts "
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Navy
         Label1.Location = New Point(144, 74)
         Label1.Name = "Label1"
-        Label1.Size = New Size(536, 37)
+        Label1.Size = New Size(632, 45)
         Label1.TabIndex = 17
         Label1.Text = ChrW(8220) & "In everything you do, put GOD first and"
         ' 
@@ -297,7 +298,7 @@ Partial Class Form3
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Navy
-        Label9.Location = New Point(483, 522)
+        Label9.Location = New Point(483, 586)
         Label9.Name = "Label9"
         Label9.Size = New Size(196, 37)
         Label9.TabIndex = 18
@@ -306,7 +307,7 @@ Partial Class Form3
         ' PictureBox3
         ' 
         PictureBox3.Image = My.Resources.Resources.pshomephoto
-        PictureBox3.Location = New Point(483, 579)
+        PictureBox3.Location = New Point(483, 636)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(284, 208)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -316,7 +317,7 @@ Partial Class Form3
         ' PictureBox5
         ' 
         PictureBox5.Image = My.Resources.Resources.gshomephoto
-        PictureBox5.Location = New Point(844, 579)
+        PictureBox5.Location = New Point(844, 636)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(284, 208)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
@@ -326,7 +327,7 @@ Partial Class Form3
         ' PictureBox6
         ' 
         PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(1197, 579)
+        PictureBox6.Location = New Point(1197, 636)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(284, 208)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
@@ -337,7 +338,7 @@ Partial Class Form3
         ' 
         Panel8.BackColor = Color.DodgerBlue
         Panel8.Controls.Add(Label12)
-        Panel8.Location = New Point(483, 783)
+        Panel8.Location = New Point(483, 840)
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(284, 60)
         Panel8.TabIndex = 22
@@ -357,7 +358,7 @@ Partial Class Form3
         ' 
         Panel9.BackColor = Color.DodgerBlue
         Panel9.Controls.Add(Label13)
-        Panel9.Location = New Point(844, 783)
+        Panel9.Location = New Point(844, 840)
         Panel9.Name = "Panel9"
         Panel9.Size = New Size(284, 60)
         Panel9.TabIndex = 23
@@ -377,7 +378,7 @@ Partial Class Form3
         ' 
         Panel10.BackColor = Color.DodgerBlue
         Panel10.Controls.Add(Label14)
-        Panel10.Location = New Point(1197, 783)
+        Panel10.Location = New Point(1197, 840)
         Panel10.Name = "Panel10"
         Panel10.Size = New Size(284, 60)
         Panel10.TabIndex = 23
@@ -421,7 +422,7 @@ Partial Class Form3
         AutoScroll = True
         AutoSize = True
         BackgroundImage = My.Resources.Resources.backgroundact3_3
-        ClientSize = New Size(1904, 1061)
+        ClientSize = New Size(1904, 1041)
         Controls.Add(Panel5)
         Controls.Add(Panel10)
         Controls.Add(Panel9)
