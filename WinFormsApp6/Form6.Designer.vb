@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class Form6
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form6))
         Panel40 = New Panel()
         Panel5 = New Panel()
         Label7 = New Label()
@@ -36,46 +36,41 @@ Partial Class Form4
         Label8 = New Label()
         Panel4 = New Panel()
         Panel6 = New Panel()
-        Label18 = New Label()
-        Label17 = New Label()
-        Label16 = New Label()
-        Label15 = New Label()
-        Label14 = New Label()
-        Label13 = New Label()
-        Label12 = New Label()
-        Label9 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        Panel7 = New Panel()
         PictureBox4 = New PictureBox()
         Label11 = New Label()
         Label10 = New Label()
-        Label1 = New Label()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox6 = New PictureBox()
         Panel5.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel6.SuspendLayout()
-        Panel7.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel40
         ' 
         Panel40.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel40.Location = New Point(843, 175)
+        Panel40.Location = New Point(1275, 172)
         Panel40.Name = "Panel40"
-        Panel40.Size = New Size(267, 6)
-        Panel40.TabIndex = 16
+        Panel40.Size = New Size(270, 6)
+        Panel40.TabIndex = 10
         ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.DodgerBlue
         Panel5.Controls.Add(Label7)
-        Panel5.Location = New Point(846, 1)
+        Panel5.Location = New Point(1275, 0)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(267, 178)
-        Panel5.TabIndex = 15
+        Panel5.Size = New Size(270, 178)
+        Panel5.TabIndex = 12
         ' 
         ' Label7
         ' 
@@ -83,15 +78,14 @@ Partial Class Form4
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(54, 67)
+        Label7.Location = New Point(48, 68)
         Label7.Name = "Label7"
-        Label7.Size = New Size(161, 40)
+        Label7.Size = New Size(168, 40)
         Label7.TabIndex = 9
-        Label7.Text = "ABOUT US"
+        Label7.Text = "CALENDAR"
         ' 
         ' Panel1
         ' 
-        Panel1.Controls.Add(Panel40)
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
@@ -102,7 +96,7 @@ Partial Class Form4
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1904, 145)
-        Panel1.TabIndex = 14
+        Panel1.TabIndex = 11
         ' 
         ' Label6
         ' 
@@ -110,11 +104,11 @@ Partial Class Form4
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.DimGray
-        Label6.Location = New Point(1336, 56)
+        Label6.Location = New Point(1057, 56)
         Label6.Name = "Label6"
-        Label6.Size = New Size(159, 37)
+        Label6.Size = New Size(171, 37)
         Label6.TabIndex = 9
-        Label6.Text = "CALENDAR"
+        Label6.Text = "PAY ONLINE"
         ' 
         ' Label5
         ' 
@@ -122,11 +116,11 @@ Partial Class Form4
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DimGray
-        Label5.Location = New Point(1140, 56)
+        Label5.Location = New Point(860, 56)
         Label5.Name = "Label5"
-        Label5.Size = New Size(171, 37)
+        Label5.Size = New Size(151, 37)
         Label5.TabIndex = 8
-        Label5.Text = "PAY ONLINE"
+        Label5.Text = "ABOUT US"
         ' 
         ' Label4
         ' 
@@ -191,138 +185,19 @@ Partial Class Form4
         ' 
         ' Panel6
         ' 
-        Panel6.Controls.Add(Label18)
-        Panel6.Controls.Add(Label17)
-        Panel6.Controls.Add(Label16)
-        Panel6.Controls.Add(Label15)
-        Panel6.Controls.Add(Label14)
-        Panel6.Controls.Add(Label13)
-        Panel6.Controls.Add(Label12)
-        Panel6.Controls.Add(Label9)
-        Panel6.Controls.Add(Label3)
-        Panel6.Controls.Add(Label2)
-        Panel6.Location = New Point(449, 280)
+        Panel6.BackColor = Color.MidnightBlue
+        Panel6.Controls.Add(PictureBox4)
+        Panel6.Controls.Add(Label11)
+        Panel6.Controls.Add(Label10)
+        Panel6.Location = New Point(0, 938)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1163, 532)
-        Panel6.TabIndex = 16
-        ' 
-        ' Label18
-        ' 
-        Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(79, 402)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(286, 21)
-        Label18.TabIndex = 9
-        Label18.Text = "socially acceptable, and morally upright."
-        ' 
-        ' Label17
-        ' 
-        Label17.AutoSize = True
-        Label17.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(79, 381)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(871, 21)
-        Label17.TabIndex = 8
-        Label17.Text = "The Integrated Montessori Center envisions its students to be academically competent, emotionally stable, physically healthy,"
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label16.ForeColor = Color.Navy
-        Label16.Location = New Point(79, 334)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(112, 37)
-        Label16.TabIndex = 7
-        Label16.Text = "VISION"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(79, 257)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(562, 21)
-        Label15.TabIndex = 6
-        Label15.Text = "* Share responsibilities in nation building; and commit to a culture of excellence."
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(79, 227)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(521, 21)
-        Label14.TabIndex = 5
-        Label14.Text = "* Live wholesome values and be involved in developing a humane society;"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(79, 197)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(340, 21)
-        Label13.TabIndex = 4
-        Label13.Text = "* Develop positive learning attitudes and habits;"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(79, 171)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(631, 21)
-        Label12.TabIndex = 3
-        Label12.Text = "* Pursue academic excellence utilizing modern technologies and improved infrastructures;"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(79, 133)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(587, 21)
-        Label9.TabIndex = 2
-        Label9.Text = "of instructional system, programs and projects, which should enable the learners to:"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(79, 103)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(911, 21)
-        Label3.TabIndex = 1
-        Label3.Text = "To realize our vision, we commit ourselves, in collaboration with parents, to provide quality education through the efficient delivery"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.Navy
-        Label2.Location = New Point(79, 52)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(135, 37)
-        Label2.TabIndex = 0
-        Label2.Text = "MISSION"
-        ' 
-        ' Panel7
-        ' 
-        Panel7.BackColor = Color.MidnightBlue
-        Panel7.Controls.Add(PictureBox4)
-        Panel7.Controls.Add(Label11)
-        Panel7.Controls.Add(Label10)
-        Panel7.Location = New Point(0, 950)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(1920, 100)
-        Panel7.TabIndex = 17
+        Panel6.Size = New Size(1920, 109)
+        Panel6.TabIndex = 13
         ' 
         ' PictureBox4
         ' 
         PictureBox4.Image = My.Resources.Resources.Screenshot_2026_01_13_081746_removebg_preview_phone
-        PictureBox4.Location = New Point(1234, 19)
+        PictureBox4.Location = New Point(1230, 23)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(34, 34)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -334,7 +209,7 @@ Partial Class Form4
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 10F)
         Label11.ForeColor = Color.White
-        Label11.Location = New Point(1274, 26)
+        Label11.Location = New Point(1270, 30)
         Label11.Name = "Label11"
         Label11.Size = New Size(237, 19)
         Label11.TabIndex = 11
@@ -345,36 +220,68 @@ Partial Class Form4
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 10F)
         Label10.ForeColor = Color.White
-        Label10.Location = New Point(1561, 26)
+        Label10.Location = New Point(1557, 30)
         Label10.Name = "Label10"
         Label10.Size = New Size(334, 19)
         Label10.TabIndex = 0
         Label10.Text = "Integrated Montessori Center" & ChrW(8232) & "© 2026 • Privacy Policy"
         ' 
-        ' Label1
+        ' PictureBox2
         ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(866, 214)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(309, 45)
-        Label1.TabIndex = 18
-        Label1.Text = "MISSION && VISION"
+        PictureBox2.Image = My.Resources.Resources._491864556_1141276431378164_6614622155628372118_n_calendar1
+        PictureBox2.Location = New Point(86, 224)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(418, 598)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 14
+        PictureBox2.TabStop = False
         ' 
-        ' Form4
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources._491804452_1141276501378157_870215507753326366_ncalendar2
+        PictureBox3.Location = New Point(538, 224)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(418, 598)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 15
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = My.Resources.Resources._491876515_1141276538044820_1294632695803104017_ncalendar3
+        PictureBox5.Location = New Point(990, 224)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(418, 598)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 16
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.Image = My.Resources.Resources._491804452_1141276501378157_870215507753326366_ncalendar2
+        PictureBox6.Location = New Point(1438, 224)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(418, 598)
+        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox6.TabIndex = 17
+        PictureBox6.TabStop = False
+        ' 
+        ' Form6
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.backgroundact3_3
         ClientSize = New Size(1904, 1041)
-        Controls.Add(Label1)
-        Controls.Add(Panel7)
+        Controls.Add(PictureBox6)
+        Controls.Add(PictureBox5)
+        Controls.Add(PictureBox3)
+        Controls.Add(PictureBox2)
         Controls.Add(Panel6)
+        Controls.Add(Panel40)
         Controls.Add(Panel5)
         Controls.Add(Panel1)
-        Name = "Form4"
-        Text = "Form4"
+        Name = "Form6"
+        Text = "Form6"
         WindowState = FormWindowState.Maximized
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
@@ -385,11 +292,12 @@ Partial Class Form4
         Panel3.PerformLayout()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
-        Panel7.ResumeLayout(False)
-        Panel7.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel40 As Panel
@@ -405,19 +313,11 @@ Partial Class Form4
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel7 As Panel
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class

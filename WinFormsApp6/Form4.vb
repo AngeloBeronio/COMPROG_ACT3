@@ -1,8 +1,4 @@
 ﻿Public Class Form4
-    Private Sub Label12_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Me.Hide()
         Form3.Show()
@@ -14,20 +10,12 @@
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        MessageBox.Show(
-    "Not working.",
-    "Error",
-    MessageBoxButtons.OK,
-    MessageBoxIcon.Error
-    )
+        Me.Hide()
+        Form6.Show()
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        MessageBox.Show(
-    "Not working.",
-    "Error",
-    MessageBoxButtons.OK,
-    MessageBoxIcon.Error
-    )
+        Me.Hide()
+        Form7.Show()
     End Sub
 End Class

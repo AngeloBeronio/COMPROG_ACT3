@@ -73,6 +73,46 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _491804452_1141276501378157_870215507753326366_ncalendar2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("491804452_1141276501378157_870215507753326366_ncalendar2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _491864556_1141276431378164_6614622155628372118_n_calendar1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("491864556_1141276431378164_6614622155628372118_n_calendar1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _491876515_1141276538044820_1294632695803104017_ncalendar3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("491876515_1141276538044820_1294632695803104017_ncalendar3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _491945033_1141276601378147_2389813566097164442_n_calendar4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("491945033_1141276601378147_2389813566097164442_n_calendar4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property backgroundact3_3() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("backgroundact3_3", resourceCulture)
