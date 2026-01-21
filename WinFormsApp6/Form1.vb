@@ -1,23 +1,28 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ApplyNavHover(Button2)
+        ApplyNavHover(Button3)
+        ApplyNavHover(Button5)
 
+        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
+        ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim studentNo As String = TextBox1.Text.Trim()
-        Dim frm2 As New Form2()
+        Dim frm9 As New Form9()
 
         If studentNo = "03-0100-25" Then
-            frm2.DiscountRate = 0.2D
-            frm2.Label18.Text = "Male Uniform"
-            frm2.Label33.Text = "Grade 3"
+            frm9.DiscountRate = 0.2D
+            frm9.Label9.Text = "Male Uniform"
 
         ElseIf studentNo = "03-0101-25" Then
-            frm2.DiscountRate = 0D
-            frm2.Label18.Text = "Female Uniform"
-            frm2.Label33.Text = "Grade 3"
+            frm9.DiscountRate = 0D
+            frm9.Label9.Text = "Female Uniform"
 
         ElseIf studentNo = "04-0103-25" Then
-            frm2.DiscountRate = 0D
-            frm2.Label18.Text = "Male Uniform"
-            frm2.Label33.Text = "Grade 4"
+            frm9.DiscountRate = 0D
+            frm9.Label9.Text = "Male Uniform"
+
         Else
             MessageBox.Show(
             "Invalid student number.",
@@ -28,29 +33,47 @@
             Exit Sub
         End If
 
-        frm2.Show()
+        frm9.Show()
         Me.Hide()
-
     End Sub
 
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Me.Hide()
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
+        Hide()
         Form4.Show()
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        Me.Hide()
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
+        Hide()
         Form3.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Me.Hide()
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
+        Hide()
         Form6.Show()
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Me.Hide()
+    Private Sub Label8_Click(sender As Object, e As EventArgs)
+        Hide()
+        Form7.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Hide()
+        Form3.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Hide()
+        Form4.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Hide()
+        Form6.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Hide()
         Form7.Show()
     End Sub
 End Class

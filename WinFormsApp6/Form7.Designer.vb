@@ -38,6 +38,10 @@ Partial Class Form7
         Label11 = New Label()
         Label10 = New Label()
         GroupBox1 = New GroupBox()
+        Label20 = New Label()
+        ComboBox3 = New ComboBox()
+        Label19 = New Label()
+        ComboBox2 = New ComboBox()
         Label17 = New Label()
         TextBox8 = New TextBox()
         Label16 = New Label()
@@ -60,6 +64,7 @@ Partial Class Form7
         TextBox2 = New TextBox()
         TextBox1 = New TextBox()
         Label18 = New Label()
+        Panel5 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -225,6 +230,10 @@ Partial Class Form7
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(Label20)
+        GroupBox1.Controls.Add(ComboBox3)
+        GroupBox1.Controls.Add(Label19)
+        GroupBox1.Controls.Add(ComboBox2)
         GroupBox1.Controls.Add(Label17)
         GroupBox1.Controls.Add(TextBox8)
         GroupBox1.Controls.Add(Label16)
@@ -253,11 +262,49 @@ Partial Class Form7
         GroupBox1.TabStop = False
         GroupBox1.Text = "InfoForm"
         ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Location = New Point(459, 261)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(189, 13)
+        Label20.TabIndex = 34
+        Label20.Text = "Are you a person with a disabilitiy?"
+        ' 
+        ' ComboBox3
+        ' 
+        ComboBox3.FormattingEnabled = True
+        ComboBox3.Items.AddRange(New Object() {"Select", "Yes", "No"})
+        ComboBox3.Location = New Point(460, 277)
+        ComboBox3.Name = "ComboBox3"
+        ComboBox3.Size = New Size(188, 23)
+        ComboBox3.TabIndex = 33
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label19.Location = New Point(460, 342)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(195, 21)
+        Label19.TabIndex = 32
+        Label19.Text = "Grade Level Applying To"
+        ' 
+        ' ComboBox2
+        ' 
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Items.AddRange(New Object() {"Select", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
+        ComboBox2.Location = New Point(459, 366)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(189, 23)
+        ComboBox2.TabIndex = 31
+        ' 
         ' Label17
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(30, 530)
+        Label17.Location = New Point(28, 557)
         Label17.Name = "Label17"
         Label17.Size = New Size(261, 21)
         Label17.TabIndex = 29
@@ -265,7 +312,7 @@ Partial Class Form7
         ' 
         ' TextBox8
         ' 
-        TextBox8.Location = New Point(30, 554)
+        TextBox8.Location = New Point(28, 581)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(388, 23)
         TextBox8.TabIndex = 19
@@ -274,7 +321,7 @@ Partial Class Form7
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(33, 454)
+        Label16.Location = New Point(31, 481)
         Label16.Name = "Label16"
         Label16.Size = New Size(136, 21)
         Label16.TabIndex = 30
@@ -284,7 +331,7 @@ Partial Class Form7
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(30, 383)
+        Label15.Location = New Point(28, 410)
         Label15.Name = "Label15"
         Label15.Size = New Size(117, 21)
         Label15.TabIndex = 29
@@ -294,7 +341,7 @@ Partial Class Form7
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(30, 315)
+        Label14.Location = New Point(28, 342)
         Label14.Name = "Label14"
         Label14.Size = New Size(131, 21)
         Label14.TabIndex = 28
@@ -304,7 +351,7 @@ Partial Class Form7
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(85, 105)
+        Label13.Location = New Point(75, 108)
         Label13.Name = "Label13"
         Label13.Size = New Size(81, 21)
         Label13.TabIndex = 27
@@ -314,7 +361,7 @@ Partial Class Form7
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(460, 214)
+        Label12.Location = New Point(460, 187)
         Label12.Name = "Label12"
         Label12.Size = New Size(37, 21)
         Label12.TabIndex = 26
@@ -324,7 +371,7 @@ Partial Class Form7
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(460, 128)
+        Label9.Location = New Point(460, 105)
         Label9.Name = "Label9"
         Label9.Size = New Size(40, 21)
         Label9.TabIndex = 25
@@ -374,7 +421,7 @@ Partial Class Form7
         ' 
         ' TextBox7
         ' 
-        TextBox7.Location = New Point(460, 152)
+        TextBox7.Location = New Point(460, 138)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(188, 23)
         TextBox7.TabIndex = 20
@@ -382,36 +429,37 @@ Partial Class Form7
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(460, 238)
+        ComboBox1.Items.AddRange(New Object() {"Select", "Male", "Female"})
+        ComboBox1.Location = New Point(460, 211)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(184, 23)
         ComboBox1.TabIndex = 19
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(30, 478)
+        TextBox6.Location = New Point(28, 505)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(388, 23)
         TextBox6.TabIndex = 18
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(30, 407)
+        TextBox5.Location = New Point(28, 434)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(388, 23)
         TextBox5.TabIndex = 18
         ' 
         ' MonthCalendar1
         ' 
-        MonthCalendar1.Location = New Point(85, 135)
+        MonthCalendar1.Location = New Point(75, 138)
         MonthCalendar1.Name = "MonthCalendar1"
         MonthCalendar1.TabIndex = 4
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(30, 339)
+        TextBox4.Location = New Point(28, 366)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(614, 23)
+        TextBox4.Size = New Size(388, 23)
         TextBox4.TabIndex = 3
         ' 
         ' TextBox3
@@ -447,12 +495,21 @@ Partial Class Form7
         Label18.TabIndex = 18
         Label18.Text = "Personal Information"
         ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
+        Panel5.Location = New Point(537, 904)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(761, 6)
+        Panel5.TabIndex = 19
+        ' 
         ' Form7
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.backgroundact3_3
         ClientSize = New Size(1904, 1041)
+        Controls.Add(Panel5)
         Controls.Add(Label18)
         Controls.Add(GroupBox1)
         Controls.Add(Panel6)
@@ -510,4 +567,9 @@ Partial Class Form7
     Friend WithEvents Label3 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Panel5 As Panel
 End Class

@@ -270,6 +270,7 @@ Partial Class Form5
         Controls.Add(Panel1)
         Name = "Form5"
         Text = "Form5"
+        WindowState = FormWindowState.Maximized
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         Panel1.ResumeLayout(False)

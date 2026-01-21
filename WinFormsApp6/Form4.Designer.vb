@@ -110,7 +110,7 @@ Partial Class Form4
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.DimGray
-        Label6.Location = New Point(1336, 56)
+        Label6.Location = New Point(1374, 56)
         Label6.Name = "Label6"
         Label6.Size = New Size(159, 37)
         Label6.TabIndex = 9
@@ -122,7 +122,7 @@ Partial Class Form4
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DimGray
-        Label5.Location = New Point(1140, 56)
+        Label5.Location = New Point(1163, 56)
         Label5.Name = "Label5"
         Label5.Size = New Size(171, 37)
         Label5.TabIndex = 8
@@ -134,7 +134,7 @@ Partial Class Form4
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.DimGray
-        Label4.Location = New Point(719, 56)
+        Label4.Location = New Point(701, 56)
         Label4.Name = "Label4"
         Label4.Size = New Size(98, 37)
         Label4.TabIndex = 7
