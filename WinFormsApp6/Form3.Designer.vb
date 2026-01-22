@@ -354,7 +354,7 @@ Partial Class Form3
         ' 
         ' Panel8
         ' 
-        Panel8.BackColor = Color.Gainsboro
+        Panel8.BackColor = Color.WhiteSmoke
         Panel8.Controls.Add(Label12)
         Panel8.Location = New Point(483, 840)
         Panel8.Name = "Panel8"
@@ -374,7 +374,7 @@ Partial Class Form3
         ' 
         ' Panel9
         ' 
-        Panel9.BackColor = Color.Gainsboro
+        Panel9.BackColor = Color.WhiteSmoke
         Panel9.Controls.Add(Label13)
         Panel9.Location = New Point(844, 840)
         Panel9.Name = "Panel9"
@@ -394,7 +394,7 @@ Partial Class Form3
         ' 
         ' Panel10
         ' 
-        Panel10.BackColor = Color.Gainsboro
+        Panel10.BackColor = Color.WhiteSmoke
         Panel10.Controls.Add(Label14)
         Panel10.Location = New Point(1197, 840)
         Panel10.Name = "Panel10"
@@ -428,7 +428,7 @@ Partial Class Form3
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(68, 76)
+        Label4.Location = New Point(66, 76)
         Label4.Name = "Label4"
         Label4.Size = New Size(104, 40)
         Label4.TabIndex = 7

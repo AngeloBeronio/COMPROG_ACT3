@@ -18,6 +18,8 @@
         ApplyNavHover(Button4)
         ApplyNavHover(Button5)
 
+        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
+
         Label21.Text = "₱" & tuitionFee.ToString("N2")
         Label22.Text = "₱" & booksFee.ToString("N2")
         Label23.Text = "₱" & uniformFee.ToString("N2")
@@ -48,17 +50,6 @@
         UpdateComboStates()
     End Sub
 
-    Private Function GetQty(cmb As ComboBox) As Integer
-        If cmb.SelectedItem Is Nothing Then Return 0
-
-        Dim qty As Integer
-        If Integer.TryParse(cmb.SelectedItem.ToString().Trim(), qty) Then
-            Return qty
-        End If
-
-        Return 0
-    End Function
-
     Private Function GetSizePrice(cmb As ComboBox, itemType As String) As Decimal
         If cmb.SelectedItem Is Nothing Then Return 0D
         Dim size As String = cmb.SelectedItem.ToString().Trim()
@@ -82,12 +73,44 @@
                 Return 0D
         End Select
     End Function
+    Private Function GetQty(cmb As ComboBox) As Integer
+        If cmb.SelectedItem Is Nothing Then Return 0
+        Dim qty As Integer
+        If Integer.TryParse(cmb.SelectedItem.ToString().Trim(), qty) Then
+            Return qty
+        End If
+        Return 0
+    End Function
+    Private Sub UpdateComboStates()
+        ComboBox1.Enabled = CheckBox1.Checked
+        ComboBox4.Enabled = CheckBox3.Checked
+        ComboBox5.Enabled = CheckBox4.Checked
+        ComboBox2.Enabled = CheckBox5.Checked
+    End Sub
 
+    Private Sub ComboBoxes_SelectedIndexChanged(sender As Object, e As EventArgs) _
+        Handles ComboBox1.SelectedIndexChanged,
+                ComboBox2.SelectedIndexChanged,
+                ComboBox4.SelectedIndexChanged,
+                ComboBox5.SelectedIndexChanged
+        CalculateTotal()
+    End Sub
+
+    Private Sub CheckBoxes_CheckedChanged(sender As Object, e As EventArgs) _
+    Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged, CheckBox3.CheckedChanged, CheckBox4.CheckedChanged, CheckBox5.CheckedChanged
+
+        If CheckBox2.Checked Then
+            ComboBox2.SelectedItem = 1
+        Else
+            ComboBox2.SelectedIndex = 0
+        End If
+
+        UpdateComboStates()
+        CalculateTotal()
+    End Sub
 
     Private Sub CalculateTotal()
         Dim total As Decimal = 0D
-
-
         If CheckBox1.Checked Then
             Dim rowTotal = tuitionFee * GetQty(ComboBox1)
             Label26.Text = "₱" & rowTotal.ToString("N2")
@@ -130,36 +153,6 @@
 
         Dim discountedTotal As Decimal = total - (total * DiscountRate)
         Label31.Text = "₱" & discountedTotal.ToString("N2")
-    End Sub
-
-
-    Private Sub UpdateComboStates()
-        ComboBox1.Enabled = CheckBox1.Checked
-        ComboBox4.Enabled = CheckBox3.Checked
-        ComboBox5.Enabled = CheckBox4.Checked
-        ComboBox2.Enabled = CheckBox5.Checked
-    End Sub
-
-    Private Sub CheckBoxes_CheckedChanged(sender As Object, e As EventArgs) _
-    Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged, CheckBox3.CheckedChanged, CheckBox4.CheckedChanged, CheckBox5.CheckedChanged
-
-        If CheckBox2.Checked Then
-            ComboBox2.SelectedItem = 1
-        Else
-            ComboBox2.SelectedIndex = 0
-        End If
-
-        UpdateComboStates()
-        CalculateTotal()
-    End Sub
-
-    Private Sub ComboBoxes_SelectedIndexChanged(sender As Object, e As EventArgs) _
-        Handles ComboBox1.SelectedIndexChanged,
-                ComboBox2.SelectedIndexChanged,
-                ComboBox4.SelectedIndexChanged,
-                ComboBox5.SelectedIndexChanged
-
-        CalculateTotal()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

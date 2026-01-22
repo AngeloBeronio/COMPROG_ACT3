@@ -1,12 +1,7 @@
 ﻿Module ButtonStyle
-
-    ' ===== NAV BUTTON FONTS =====
     Private navFont As New Font("Segoe UI", 21.75F, FontStyle.Bold)
     Private navHoverFont As New Font("Segoe UI", 22.0F, FontStyle.Bold)
 
-    ' ===========================
-    ' NAV BUTTON HOVER
-    ' ===========================
     Public Sub ApplyNavHover(btn As Button)
 
         btn.Font = navFont
@@ -34,10 +29,6 @@
         btn.Font = navFont
     End Sub
 
-
-    ' ===========================
-    ' COLORED BUTTON HOVER
-    ' ===========================
     Public Sub ApplyColorHover(
         btn As Button,
         normalBack As Color,
@@ -48,7 +39,6 @@
         btn.BackColor = normalBack
         btn.ForeColor = normalText
 
-        ' Store colors, size, and location
         btn.Tag = New ButtonColors(
             normalBack,
             hoverBack,
@@ -69,7 +59,6 @@
         btn.BackColor = colors.HoverBack
         btn.ForeColor = colors.HoverText
 
-        ' Grow from center (+2 size)
         btn.Location = New Point(
             colors.OriginalLocation.X - 4,
             colors.OriginalLocation.Y - 4
@@ -91,10 +80,6 @@
         btn.Location = colors.OriginalLocation
     End Sub
 
-
-    ' ===========================
-    ' HELPER CLASS
-    ' ===========================
     Private Class ButtonColors
         Public NormalBack As Color
         Public HoverBack As Color
@@ -119,5 +104,4 @@
             OriginalLocation = location
         End Sub
     End Class
-
 End Module

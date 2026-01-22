@@ -1,25 +1,29 @@
 ﻿Public Class Form6
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        Me.Hide()
+    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ApplyNavHover(Button2)
+        ApplyNavHover(Button5)
+        ApplyNavHover(Button3)
+
+        ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Hide()
         Form3.Show()
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Me.Hide()
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Hide()
         Form4.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Me.Hide()
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Hide()
         Form1.Show()
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Me.Hide()
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Hide()
         Form7.Show()
-    End Sub
-
-    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

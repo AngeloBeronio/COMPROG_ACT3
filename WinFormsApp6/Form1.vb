@@ -7,6 +7,7 @@
         ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
         ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
     End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim studentNo As String = TextBox1.Text.Trim()
         Dim frm9 As New Form9()
@@ -35,26 +36,6 @@
 
         frm9.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-        Hide()
-        Form4.Show()
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-        Hide()
-        Form3.Show()
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs)
-        Hide()
-        Form6.Show()
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs)
-        Hide()
-        Form7.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

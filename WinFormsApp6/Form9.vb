@@ -1,16 +1,13 @@
 ﻿Public Class Form9
     Public DiscountRate As Decimal = 0D
-
-    Private Class CartItem
-        Public checkBox As CheckBox
-        Public quantityUpDown As NumericUpDown
-        Public itemName As String
-        Public unitPrice As Decimal
-    End Class
-
-    Private cartItems As New List(Of CartItem)
-
     Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ApplyNavHover(Button2)
+        ApplyNavHover(Button3)
+        ApplyNavHover(Button5)
+
+        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
+        ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
+
         cartItems.Add(New CartItem With {.checkBox = CheckBox1, .quantityUpDown = NumericUpDown1, .itemName = "Student Uniform", .unitPrice = 600D})
         cartItems.Add(New CartItem With {.checkBox = CheckBox2, .quantityUpDown = NumericUpDown2, .itemName = "PE Attire", .unitPrice = 800D})
         cartItems.Add(New CartItem With {.checkBox = CheckBox3, .quantityUpDown = NumericUpDown3, .itemName = "Lanyard", .unitPrice = 80D})
@@ -27,6 +24,15 @@
         UpdateCart()
     End Sub
 
+    Private Class CartItem
+        Public checkBox As CheckBox
+        Public quantityUpDown As NumericUpDown
+        Public itemName As String
+        Public unitPrice As Decimal
+    End Class
+
+    Private cartItems As New List(Of CartItem)
+
     Private Sub UpdateQuantityStates()
         For Each item In cartItems
             item.quantityUpDown.Enabled = item.checkBox.Checked
@@ -35,16 +41,15 @@
 
     Private Sub UpdateCart()
         Dim subtotal As Decimal = 0D
-        ListBox1.Items.Clear()
+        CartList.Items.Clear()
 
         For Each item In cartItems
             If item.checkBox.Checked AndAlso item.quantityUpDown.Value > 0 Then
                 Dim itemSubtotal = item.unitPrice * item.quantityUpDown.Value
-                ListBox1.Items.Add(item.itemName & " x" & item.quantityUpDown.Value & " - ₱" & itemSubtotal.ToString("N2"))
+                CartList.Items.Add(item.itemName & " x" & item.quantityUpDown.Value & " - ₱" & itemSubtotal.ToString("N2"))
                 subtotal += itemSubtotal
             End If
         Next
-
         Dim discountAmount As Decimal = subtotal * DiscountRate
         Dim finalTotal As Decimal = subtotal - discountAmount
 
@@ -68,5 +73,25 @@
                 NumericUpDown10.ValueChanged, NumericUpDown11.ValueChanged, NumericUpDown12.ValueChanged
 
         UpdateCart()
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Hide()
+        Form5.Show()
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Hide()
+        Form3.Show()
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Hide()
+        Form4.Show()
+    End Sub
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Hide()
+        Form6.Show()
+    End Sub
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Hide()
+        Form7.Show()
     End Sub
 End Class

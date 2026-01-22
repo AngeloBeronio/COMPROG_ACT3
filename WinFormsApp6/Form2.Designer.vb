@@ -902,9 +902,9 @@ Partial Class Form2
         Label2.Font = New Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(146, 181)
         Label2.Name = "Label2"
-        Label2.Size = New Size(264, 21)
+        Label2.Size = New Size(343, 21)
         Label2.TabIndex = 13
-        Label2.Text = "Home > Enrollment > Enrollment Fees"
+        Label2.Text = "Home > Register for Enrollment > Enrollment Fees"
         ' 
         ' Label1
         ' 

@@ -3,6 +3,19 @@
 Public Class Form7
     Dim frm9 As New Form9()
 
+    Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ApplyNavHover(Button2)
+        ApplyNavHover(Button3)
+        ApplyNavHover(Button4)
+        ApplyNavHover(Button5)
+
+        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
+
+        ComboBox1.SelectedIndex = 0
+        ComboBox2.SelectedIndex = 0
+        ComboBox3.SelectedIndex = 0
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
@@ -35,36 +48,23 @@ Public Class Form7
         Form2.Show()
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        Me.Hide()
-        Form6.Show()
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Me.Hide()
-        Form4.Show()
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Me.Hide()
-        Form1.Show()
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
         Form3.Show()
     End Sub
 
-    Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        Form4.Show()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 
-    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
-
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Me.Hide()
+        Form5.Show()
     End Sub
-
 End Class
