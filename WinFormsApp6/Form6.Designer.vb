@@ -27,10 +27,6 @@ Partial Class Form6
         PictureBox4 = New PictureBox()
         Label11 = New Label()
         Label10 = New Label()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox6 = New PictureBox()
         Panel5 = New Panel()
         Label4 = New Label()
         Panel4 = New Panel()
@@ -41,15 +37,31 @@ Partial Class Form6
         Button3 = New Button()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        CheckedListBox1 = New CheckedListBox()
+        DataGridView1 = New DataGridView()
+        Button1 = New Button()
+        GroupBox1 = New GroupBox()
+        RadioButton10 = New RadioButton()
+        RadioButton9 = New RadioButton()
+        RadioButton5 = New RadioButton()
+        RadioButton6 = New RadioButton()
+        RadioButton7 = New RadioButton()
+        RadioButton8 = New RadioButton()
+        RadioButton4 = New RadioButton()
+        RadioButton3 = New RadioButton()
+        RadioButton2 = New RadioButton()
+        RadioButton1 = New RadioButton()
+        Panel3 = New Panel()
+        Label2 = New Label()
+        Label1 = New Label()
         Panel6.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        GroupBox1.SuspendLayout()
+        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel6
@@ -95,46 +107,6 @@ Partial Class Form6
         Label10.TabIndex = 0
         Label10.Text = "Integrated Montessori Center" & ChrW(8232) & "© 2026 • Privacy Policy"
         ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Image = My.Resources.Resources._491864556_1141276431378164_6614622155628372118_n_calendar1
-        PictureBox2.Location = New Point(86, 224)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(418, 598)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 14
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Image = My.Resources.Resources._491804452_1141276501378157_870215507753326366_ncalendar2
-        PictureBox3.Location = New Point(538, 224)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(418, 598)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 15
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.Image = My.Resources.Resources._491876515_1141276538044820_1294632695803104017_ncalendar3
-        PictureBox5.Location = New Point(990, 224)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(418, 598)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 16
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.Image = My.Resources.Resources._491804452_1141276501378157_870215507753326366_ncalendar2
-        PictureBox6.Location = New Point(1438, 224)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(418, 598)
-        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox6.TabIndex = 17
-        PictureBox6.TabStop = False
-        ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.DodgerBlue
@@ -150,11 +122,11 @@ Partial Class Form6
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(34, 75)
+        Label4.Location = New Point(51, 75)
         Label4.Name = "Label4"
-        Label4.Size = New Size(168, 40)
+        Label4.Size = New Size(136, 40)
         Label4.TabIndex = 7
-        Label4.Text = "CALENDAR"
+        Label4.Text = "LIBRARY"
         ' 
         ' Panel4
         ' 
@@ -268,19 +240,215 @@ Partial Class Form6
         Panel2.Size = New Size(1904, 6)
         Panel2.TabIndex = 4
         ' 
+        ' CheckedListBox1
+        ' 
+        CheckedListBox1.Font = New Font("Segoe UI", 8.25F)
+        CheckedListBox1.FormattingEnabled = True
+        CheckedListBox1.Location = New Point(1331, 302)
+        CheckedListBox1.Name = "CheckedListBox1"
+        CheckedListBox1.Size = New Size(206, 480)
+        CheckedListBox1.TabIndex = 35
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Dock = DockStyle.Fill
+        DataGridView1.Location = New Point(0, 0)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
+        DataGridView1.Size = New Size(779, 480)
+        DataGridView1.TabIndex = 36
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(1357, 808)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(149, 53)
+        Button1.TabIndex = 41
+        Button1.Text = "Borrow"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(RadioButton10)
+        GroupBox1.Controls.Add(RadioButton9)
+        GroupBox1.Controls.Add(RadioButton5)
+        GroupBox1.Controls.Add(RadioButton6)
+        GroupBox1.Controls.Add(RadioButton7)
+        GroupBox1.Controls.Add(RadioButton8)
+        GroupBox1.Controls.Add(RadioButton4)
+        GroupBox1.Controls.Add(RadioButton3)
+        GroupBox1.Controls.Add(RadioButton2)
+        GroupBox1.Controls.Add(RadioButton1)
+        GroupBox1.Location = New Point(235, 302)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(251, 480)
+        GroupBox1.TabIndex = 42
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Categories"
+        ' 
+        ' RadioButton10
+        ' 
+        RadioButton10.AutoSize = True
+        RadioButton10.Location = New Point(130, 309)
+        RadioButton10.Name = "RadioButton10"
+        RadioButton10.Size = New Size(103, 19)
+        RadioButton10.TabIndex = 57
+        RadioButton10.TabStop = True
+        RadioButton10.Text = "Draw Materials"
+        RadioButton10.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton9
+        ' 
+        RadioButton9.AutoSize = True
+        RadioButton9.Location = New Point(130, 398)
+        RadioButton9.Name = "RadioButton9"
+        RadioButton9.Size = New Size(95, 19)
+        RadioButton9.TabIndex = 56
+        RadioButton9.TabStop = True
+        RadioButton9.Text = "Board Games"
+        RadioButton9.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton5
+        ' 
+        RadioButton5.AutoSize = True
+        RadioButton5.Location = New Point(5, 398)
+        RadioButton5.Name = "RadioButton5"
+        RadioButton5.Size = New Size(60, 19)
+        RadioButton5.TabIndex = 55
+        RadioButton5.TabStop = True
+        RadioButton5.Text = "Health"
+        RadioButton5.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton6
+        ' 
+        RadioButton6.AutoSize = True
+        RadioButton6.Location = New Point(128, 115)
+        RadioButton6.Name = "RadioButton6"
+        RadioButton6.Size = New Size(83, 19)
+        RadioButton6.TabIndex = 54
+        RadioButton6.TabStop = True
+        RadioButton6.Text = "Geography"
+        RadioButton6.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton7
+        ' 
+        RadioButton7.AutoSize = True
+        RadioButton7.Location = New Point(128, 45)
+        RadioButton7.Name = "RadioButton7"
+        RadioButton7.Size = New Size(63, 19)
+        RadioButton7.TabIndex = 53
+        RadioButton7.TabStop = True
+        RadioButton7.Text = "History"
+        RadioButton7.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton8
+        ' 
+        RadioButton8.AutoSize = True
+        RadioButton8.Location = New Point(130, 214)
+        RadioButton8.Name = "RadioButton8"
+        RadioButton8.Size = New Size(77, 19)
+        RadioButton8.TabIndex = 52
+        RadioButton8.TabStop = True
+        RadioButton8.Text = "Reference"
+        RadioButton8.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton4
+        ' 
+        RadioButton4.AutoSize = True
+        RadioButton4.Location = New Point(8, 309)
+        RadioButton4.Name = "RadioButton4"
+        RadioButton4.Size = New Size(64, 19)
+        RadioButton4.TabIndex = 51
+        RadioButton4.TabStop = True
+        RadioButton4.Text = "Filipino"
+        RadioButton4.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Location = New Point(8, 214)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(63, 19)
+        RadioButton3.TabIndex = 50
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "English"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(6, 115)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(65, 19)
+        RadioButton2.TabIndex = 49
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "Science"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(5, 45)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(94, 19)
+        RadioButton1.TabIndex = 48
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Mathematics"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(DataGridView1)
+        Panel3.Location = New Point(492, 302)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(779, 480)
+        Panel3.TabIndex = 43
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.Black
+        Label2.Location = New Point(165, 204)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(169, 21)
+        Label2.TabIndex = 45
+        Label2.Text = "Home > Login > Library"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(165, 225)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(151, 45)
+        Label1.TabIndex = 44
+        Label1.Text = "LIBRARY"
+        ' 
         ' Form6
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.backgroundact3_3
         ClientSize = New Size(1904, 1041)
+        Controls.Add(GroupBox1)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(Panel3)
+        Controls.Add(Button1)
+        Controls.Add(CheckedListBox1)
         Controls.Add(Panel5)
         Controls.Add(Panel4)
         Controls.Add(Panel1)
-        Controls.Add(PictureBox6)
-        Controls.Add(PictureBox5)
-        Controls.Add(PictureBox3)
-        Controls.Add(PictureBox2)
         Controls.Add(Panel6)
         Name = "Form6"
         Text = "Form6"
@@ -288,24 +456,21 @@ Partial Class Form6
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        Panel3.ResumeLayout(False)
         ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents Panel6 As Panel
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel4 As Panel
@@ -316,4 +481,21 @@ Partial Class Form6
     Friend WithEvents Button3 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents RadioButton10 As RadioButton
+    Friend WithEvents RadioButton9 As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents RadioButton7 As RadioButton
+    Friend WithEvents RadioButton8 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

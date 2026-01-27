@@ -25,12 +25,11 @@
             frm9.Label9.Text = "Male Uniform"
 
         Else
-            MessageBox.Show(
+            MsgBox(
             "Invalid student number.",
-            "Verification Failed",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error
-        )
+            MsgBoxStyle.OkOnly,
+            "Verification Failed"
+            )
             Exit Sub
         End If
 

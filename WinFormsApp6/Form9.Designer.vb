@@ -81,10 +81,8 @@ Partial Class Form9
         Panel11 = New Panel()
         GroupBox3 = New GroupBox()
         CartList = New ListBox()
-        Panel8 = New Panel()
         Label2 = New Label()
         Label1 = New Label()
-        Panel16 = New Panel()
         GroupBox4 = New GroupBox()
         Label45 = New Label()
         Label44 = New Label()
@@ -122,12 +120,19 @@ Partial Class Form9
         Panel20 = New Panel()
         Panel21 = New Panel()
         Panel22 = New Panel()
+        Label51 = New Label()
+        Label6 = New Label()
+        Label50 = New Label()
+        Label49 = New Label()
+        TextBox1 = New TextBox()
+        Label48 = New Label()
+        Label8 = New Label()
+        Label7 = New Label()
         Label5 = New Label()
         Label35 = New Label()
         Label34 = New Label()
         Panel3 = New Panel()
         Button1 = New Button()
-        Panel23 = New Panel()
         Panel5 = New Panel()
         Label4 = New Label()
         Panel4 = New Panel()
@@ -138,6 +143,9 @@ Partial Class Form9
         Button3 = New Button()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Panel8 = New Panel()
+        Panel16 = New Panel()
+        Panel23 = New Panel()
         Panel6.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -199,7 +207,7 @@ Partial Class Form9
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 10.0F)
+        Label11.Font = New Font("Segoe UI", 10F)
         Label11.ForeColor = Color.White
         Label11.Location = New Point(1274, 26)
         Label11.Name = "Label11"
@@ -210,7 +218,7 @@ Partial Class Form9
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 10.0F)
+        Label10.Font = New Font("Segoe UI", 10F)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(1561, 26)
         Label10.Name = "Label10"
@@ -220,6 +228,7 @@ Partial Class Form9
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.BackColor = Color.White
         GroupBox1.Controls.Add(Label47)
         GroupBox1.Controls.Add(Label46)
         GroupBox1.Controls.Add(NumericUpDown2)
@@ -234,7 +243,6 @@ Partial Class Form9
         GroupBox1.Controls.Add(Label9)
         GroupBox1.Controls.Add(Panel15)
         GroupBox1.Controls.Add(Panel14)
-        GroupBox1.Controls.Add(Panel7)
         GroupBox1.Location = New Point(162, 275)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(320, 570)
@@ -280,6 +288,7 @@ Partial Class Form9
         ' CheckBox2
         ' 
         CheckBox2.AutoSize = True
+        CheckBox2.Cursor = Cursors.Hand
         CheckBox2.Location = New Point(16, 386)
         CheckBox2.Name = "CheckBox2"
         CheckBox2.Size = New Size(15, 14)
@@ -290,7 +299,7 @@ Partial Class Form9
         ' 
         Label12.AutoSize = True
         Label12.BackColor = Color.Transparent
-        Label12.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.Black
         Label12.Location = New Point(123, 397)
         Label12.Name = "Label12"
@@ -301,6 +310,7 @@ Partial Class Form9
         ' PictureBox3
         ' 
         PictureBox3.BackColor = Color.White
+        PictureBox3.BorderStyle = BorderStyle.FixedSingle
         PictureBox3.Location = New Point(57, 362)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(60, 60)
@@ -322,6 +332,7 @@ Partial Class Form9
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
+        CheckBox1.Cursor = Cursors.Hand
         CheckBox1.Location = New Point(16, 125)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(15, 14)
@@ -332,7 +343,7 @@ Partial Class Form9
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(123, 134)
         Label3.Name = "Label3"
@@ -343,6 +354,7 @@ Partial Class Form9
         ' PictureBox2
         ' 
         PictureBox2.BackColor = Color.White
+        PictureBox2.BorderStyle = BorderStyle.FixedSingle
         PictureBox2.Location = New Point(57, 101)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(60, 60)
@@ -364,7 +376,7 @@ Partial Class Form9
         ' Panel15
         ' 
         Panel15.BackColor = Color.DimGray
-        Panel15.Location = New Point(16, 519)
+        Panel15.Location = New Point(41, 519)
         Panel15.Name = "Panel15"
         Panel15.Size = New Size(227, 2)
         Panel15.TabIndex = 23
@@ -372,7 +384,7 @@ Partial Class Form9
         ' Panel14
         ' 
         Panel14.BackColor = Color.DimGray
-        Panel14.Location = New Point(16, 245)
+        Panel14.Location = New Point(41, 245)
         Panel14.Name = "Panel14"
         Panel14.Size = New Size(227, 2)
         Panel14.TabIndex = 13
@@ -380,13 +392,14 @@ Partial Class Form9
         ' Panel7
         ' 
         Panel7.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel7.Location = New Point(0, 564)
+        Panel7.Location = New Point(160, 273)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(434, 6)
+        Panel7.Size = New Size(324, 584)
         Panel7.TabIndex = 11
         ' 
         ' GroupBox2
         ' 
+        GroupBox2.BackColor = Color.White
         GroupBox2.Controls.Add(Label40)
         GroupBox2.Controls.Add(Label39)
         GroupBox2.Controls.Add(Label38)
@@ -500,6 +513,7 @@ Partial Class Form9
         ' CheckBox7
         ' 
         CheckBox7.AutoSize = True
+        CheckBox7.Cursor = Cursors.Hand
         CheckBox7.Location = New Point(38, 451)
         CheckBox7.Name = "CheckBox7"
         CheckBox7.Size = New Size(15, 14)
@@ -509,6 +523,7 @@ Partial Class Form9
         ' CheckBox6
         ' 
         CheckBox6.AutoSize = True
+        CheckBox6.Cursor = Cursors.Hand
         CheckBox6.Location = New Point(38, 351)
         CheckBox6.Name = "CheckBox6"
         CheckBox6.Size = New Size(15, 14)
@@ -519,7 +534,7 @@ Partial Class Form9
         ' 
         Label22.AutoSize = True
         Label22.BackColor = Color.Transparent
-        Label22.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Black
         Label22.Location = New Point(145, 462)
         Label22.Name = "Label22"
@@ -531,7 +546,7 @@ Partial Class Form9
         ' 
         Label20.AutoSize = True
         Label20.BackColor = Color.Transparent
-        Label20.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.Black
         Label20.Location = New Point(145, 362)
         Label20.Name = "Label20"
@@ -542,6 +557,7 @@ Partial Class Form9
         ' PictureBox9
         ' 
         PictureBox9.BackColor = Color.White
+        PictureBox9.BorderStyle = BorderStyle.FixedSingle
         PictureBox9.Location = New Point(79, 427)
         PictureBox9.Name = "PictureBox9"
         PictureBox9.Size = New Size(60, 60)
@@ -563,6 +579,7 @@ Partial Class Form9
         ' PictureBox8
         ' 
         PictureBox8.BackColor = Color.White
+        PictureBox8.BorderStyle = BorderStyle.FixedSingle
         PictureBox8.Location = New Point(79, 327)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(60, 60)
@@ -598,6 +615,7 @@ Partial Class Form9
         ' CheckBox5
         ' 
         CheckBox5.AutoSize = True
+        CheckBox5.Cursor = Cursors.Hand
         CheckBox5.Location = New Point(38, 270)
         CheckBox5.Name = "CheckBox5"
         CheckBox5.Size = New Size(15, 14)
@@ -615,7 +633,7 @@ Partial Class Form9
         ' 
         Label18.AutoSize = True
         Label18.BackColor = Color.Transparent
-        Label18.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label18.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.Black
         Label18.Location = New Point(145, 281)
         Label18.Name = "Label18"
@@ -626,6 +644,7 @@ Partial Class Form9
         ' CheckBox4
         ' 
         CheckBox4.AutoSize = True
+        CheckBox4.Cursor = Cursors.Hand
         CheckBox4.Location = New Point(38, 178)
         CheckBox4.Name = "CheckBox4"
         CheckBox4.Size = New Size(15, 14)
@@ -635,6 +654,7 @@ Partial Class Form9
         ' PictureBox7
         ' 
         PictureBox7.BackColor = Color.White
+        PictureBox7.BorderStyle = BorderStyle.FixedSingle
         PictureBox7.Location = New Point(79, 246)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(60, 60)
@@ -656,6 +676,7 @@ Partial Class Form9
         ' CheckBox3
         ' 
         CheckBox3.AutoSize = True
+        CheckBox3.Cursor = Cursors.Hand
         CheckBox3.Location = New Point(38, 70)
         CheckBox3.Name = "CheckBox3"
         CheckBox3.Size = New Size(15, 14)
@@ -674,7 +695,7 @@ Partial Class Form9
         ' 
         Label16.AutoSize = True
         Label16.BackColor = Color.Transparent
-        Label16.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.Black
         Label16.Location = New Point(145, 189)
         Label16.Name = "Label16"
@@ -685,6 +706,7 @@ Partial Class Form9
         ' PictureBox6
         ' 
         PictureBox6.BackColor = Color.White
+        PictureBox6.BorderStyle = BorderStyle.FixedSingle
         PictureBox6.Location = New Point(79, 154)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(60, 60)
@@ -715,7 +737,7 @@ Partial Class Form9
         ' 
         Label14.AutoSize = True
         Label14.BackColor = Color.Transparent
-        Label14.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Black
         Label14.Location = New Point(145, 81)
         Label14.Name = "Label14"
@@ -734,6 +756,7 @@ Partial Class Form9
         ' PictureBox5
         ' 
         PictureBox5.BackColor = Color.White
+        PictureBox5.BorderStyle = BorderStyle.FixedSingle
         PictureBox5.Location = New Point(79, 46)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(60, 60)
@@ -780,23 +803,15 @@ Partial Class Form9
         ' 
         ' CartList
         ' 
-        CartList.BackColor = Color.MidnightBlue
+        CartList.BackColor = SystemColors.Control
         CartList.BorderStyle = BorderStyle.None
         CartList.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CartList.ForeColor = Color.White
+        CartList.ForeColor = Color.Black
         CartList.FormattingEnabled = True
         CartList.Location = New Point(6, 9)
         CartList.Name = "CartList"
-        CartList.Size = New Size(481, 375)
+        CartList.Size = New Size(481, 350)
         CartList.TabIndex = 0
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel8.Location = New Point(497, 839)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(387, 6)
-        Panel8.TabIndex = 20
         ' 
         ' Label2
         ' 
@@ -822,16 +837,9 @@ Partial Class Form9
         Label1.TabIndex = 21
         Label1.Text = "STORE"
         ' 
-        ' Panel16
-        ' 
-        Panel16.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel16.Location = New Point(906, 839)
-        Panel16.Name = "Panel16"
-        Panel16.Size = New Size(387, 6)
-        Panel16.TabIndex = 24
-        ' 
         ' GroupBox4
         ' 
+        GroupBox4.BackColor = Color.White
         GroupBox4.Controls.Add(Label45)
         GroupBox4.Controls.Add(Label44)
         GroupBox4.Controls.Add(Label43)
@@ -945,6 +953,7 @@ Partial Class Form9
         ' CheckBox12
         ' 
         CheckBox12.AutoSize = True
+        CheckBox12.Cursor = Cursors.Hand
         CheckBox12.Location = New Point(35, 451)
         CheckBox12.Name = "CheckBox12"
         CheckBox12.Size = New Size(15, 14)
@@ -973,6 +982,7 @@ Partial Class Form9
         ' CheckBox11
         ' 
         CheckBox11.AutoSize = True
+        CheckBox11.Cursor = Cursors.Hand
         CheckBox11.Location = New Point(35, 351)
         CheckBox11.Name = "CheckBox11"
         CheckBox11.Size = New Size(15, 14)
@@ -982,6 +992,7 @@ Partial Class Form9
         ' PictureBox14
         ' 
         PictureBox14.BackColor = Color.White
+        PictureBox14.BorderStyle = BorderStyle.FixedSingle
         PictureBox14.Location = New Point(76, 427)
         PictureBox14.Name = "PictureBox14"
         PictureBox14.Size = New Size(60, 60)
@@ -1022,6 +1033,7 @@ Partial Class Form9
         ' CheckBox10
         ' 
         CheckBox10.AutoSize = True
+        CheckBox10.Cursor = Cursors.Hand
         CheckBox10.Location = New Point(35, 266)
         CheckBox10.Name = "CheckBox10"
         CheckBox10.Size = New Size(15, 14)
@@ -1031,6 +1043,7 @@ Partial Class Form9
         ' PictureBox13
         ' 
         PictureBox13.BackColor = Color.White
+        PictureBox13.BorderStyle = BorderStyle.FixedSingle
         PictureBox13.Location = New Point(76, 327)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(60, 60)
@@ -1071,6 +1084,7 @@ Partial Class Form9
         ' CheckBox9
         ' 
         CheckBox9.AutoSize = True
+        CheckBox9.Cursor = Cursors.Hand
         CheckBox9.Location = New Point(35, 174)
         CheckBox9.Name = "CheckBox9"
         CheckBox9.Size = New Size(15, 14)
@@ -1080,6 +1094,7 @@ Partial Class Form9
         ' PictureBox12
         ' 
         PictureBox12.BackColor = Color.White
+        PictureBox12.BorderStyle = BorderStyle.FixedSingle
         PictureBox12.Location = New Point(76, 242)
         PictureBox12.Name = "PictureBox12"
         PictureBox12.Size = New Size(60, 60)
@@ -1121,6 +1136,7 @@ Partial Class Form9
         ' CheckBox8
         ' 
         CheckBox8.AutoSize = True
+        CheckBox8.Cursor = Cursors.Hand
         CheckBox8.Location = New Point(35, 70)
         CheckBox8.Name = "CheckBox8"
         CheckBox8.Size = New Size(15, 14)
@@ -1130,6 +1146,7 @@ Partial Class Form9
         ' PictureBox11
         ' 
         PictureBox11.BackColor = Color.White
+        PictureBox11.BorderStyle = BorderStyle.FixedSingle
         PictureBox11.Location = New Point(76, 150)
         PictureBox11.Name = "PictureBox11"
         PictureBox11.Size = New Size(60, 60)
@@ -1179,6 +1196,7 @@ Partial Class Form9
         ' PictureBox10
         ' 
         PictureBox10.BackColor = Color.White
+        PictureBox10.BorderStyle = BorderStyle.FixedSingle
         PictureBox10.Location = New Point(76, 46)
         PictureBox10.Name = "PictureBox10"
         PictureBox10.Size = New Size(60, 60)
@@ -1215,15 +1233,114 @@ Partial Class Form9
         ' 
         ' Panel22
         ' 
-        Panel22.BackColor = SystemColors.Control
+        Panel22.BackColor = Color.White
+        Panel22.Controls.Add(Label51)
+        Panel22.Controls.Add(Label6)
+        Panel22.Controls.Add(Label50)
+        Panel22.Controls.Add(Label49)
+        Panel22.Controls.Add(TextBox1)
+        Panel22.Controls.Add(Label48)
+        Panel22.Controls.Add(Label8)
+        Panel22.Controls.Add(Label7)
         Panel22.Controls.Add(Label5)
         Panel22.Controls.Add(Label35)
         Panel22.Controls.Add(Label34)
         Panel22.Controls.Add(Panel3)
         Panel22.Location = New Point(1401, 236)
         Panel22.Name = "Panel22"
-        Panel22.Size = New Size(504, 609)
+        Panel22.Size = New Size(506, 670)
         Panel22.TabIndex = 13
+        ' 
+        ' Label51
+        ' 
+        Label51.AutoSize = True
+        Label51.BackColor = Color.Transparent
+        Label51.Font = New Font("Segoe UI", 16.0F, FontStyle.Bold)
+        Label51.ForeColor = Color.Black
+        Label51.Location = New Point(132, 622)
+        Label51.Name = "Label51"
+        Label51.Size = New Size(40, 30)
+        Label51.TabIndex = 48
+        Label51.Text = "₱0"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Segoe UI Semibold", 6.5F, FontStyle.Bold Or FontStyle.Italic)
+        Label6.ForeColor = Color.Gray
+        Label6.Location = New Point(17, 517)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(238, 12)
+        Label6.TabIndex = 45
+        Label6.Text = "* Verified discounts is already applied in the total amount"
+        ' 
+        ' Label50
+        ' 
+        Label50.AutoSize = True
+        Label50.BackColor = Color.Transparent
+        Label50.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label50.ForeColor = Color.Black
+        Label50.Location = New Point(23, 622)
+        Label50.Name = "Label50"
+        Label50.Size = New Size(100, 30)
+        Label50.TabIndex = 47
+        Label50.Text = "CHANGE"
+        ' 
+        ' Label49
+        ' 
+        Label49.AutoSize = True
+        Label49.BackColor = Color.Transparent
+        Label49.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label49.ForeColor = Color.Black
+        Label49.Location = New Point(313, 495)
+        Label49.Name = "Label49"
+        Label49.Size = New Size(20, 21)
+        Label49.TabIndex = 46
+        Label49.Text = "₱"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(339, 494)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(142, 23)
+        TextBox1.TabIndex = 48
+        ' 
+        ' Label48
+        ' 
+        Label48.AutoSize = True
+        Label48.BackColor = Color.Transparent
+        Label48.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label48.ForeColor = Color.Black
+        Label48.Location = New Point(279, 455)
+        Label48.Name = "Label48"
+        Label48.Size = New Size(212, 30)
+        Label48.TabIndex = 47
+        Label48.Text = "PAYMENT AMOUNT"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.Black
+        Label8.Location = New Point(165, 320)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(177, 30)
+        Label8.TabIndex = 47
+        Label8.Text = "TOTAL AMOUNT"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.Black
+        Label7.Location = New Point(23, 455)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(177, 30)
+        Label7.TabIndex = 46
+        Label7.Text = "TOTAL AMOUNT"
         ' 
         ' Label5
         ' 
@@ -1241,11 +1358,11 @@ Partial Class Form9
         ' 
         Label35.AutoSize = True
         Label35.BackColor = Color.Transparent
-        Label35.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label35.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label35.ForeColor = Color.Black
-        Label35.Location = New Point(153, 451)
+        Label35.Location = New Point(23, 485)
         Label35.Name = "Label35"
-        Label35.Size = New Size(178, 40)
+        Label35.Size = New Size(128, 30)
         Label35.TabIndex = 25
         Label35.Text = "Placeholder"
         ' 
@@ -1265,30 +1382,23 @@ Partial Class Form9
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
         Panel3.Controls.Add(Button1)
-        Panel3.Location = New Point(161, 512)
+        Panel3.Location = New Point(192, 558)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(158, 75)
+        Panel3.Size = New Size(130, 48)
         Panel3.TabIndex = 32
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.DodgerBlue
-        Button1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Cursor = Cursors.Hand
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(0, 0)
         Button1.Name = "Button1"
-        Button1.Size = New Size(158, 69)
+        Button1.Size = New Size(130, 45)
         Button1.TabIndex = 30
         Button1.Text = "CHECKOUT"
         Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Panel23
-        ' 
-        Panel23.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel23.Location = New Point(1401, 840)
-        Panel23.Name = "Panel23"
-        Panel23.Size = New Size(500, 6)
-        Panel23.TabIndex = 25
         ' 
         ' Panel5
         ' 
@@ -1423,26 +1533,51 @@ Partial Class Form9
         Panel2.Size = New Size(1904, 6)
         Panel2.TabIndex = 4
         ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
+        Panel8.Location = New Point(495, 273)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(391, 584)
+        Panel8.TabIndex = 33
+        ' 
+        ' Panel16
+        ' 
+        Panel16.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
+        Panel16.Location = New Point(904, 273)
+        Panel16.Name = "Panel16"
+        Panel16.Size = New Size(391, 584)
+        Panel16.TabIndex = 34
+        ' 
+        ' Panel23
+        ' 
+        Panel23.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
+        Panel23.Location = New Point(1399, 236)
+        Panel23.Name = "Panel23"
+        Panel23.Size = New Size(504, 682)
+        Panel23.TabIndex = 25
+        ' 
         ' Form9
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.backgroundact3_3
         ClientSize = New Size(1904, 1041)
         Controls.Add(Panel5)
         Controls.Add(Panel4)
         Controls.Add(Panel1)
-        Controls.Add(Panel23)
-        Controls.Add(Panel16)
         Controls.Add(GroupBox4)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(Panel8)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Controls.Add(Panel6)
         Controls.Add(Panel22)
+        Controls.Add(Panel7)
+        Controls.Add(Panel8)
+        Controls.Add(Panel16)
+        Controls.Add(Panel23)
         ForeColor = SystemColors.Control
         Name = "Form9"
         Text = "Form9"
@@ -1499,7 +1634,6 @@ Partial Class Form9
     Friend WithEvents Panel7 As Panel
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Panel11 As Panel
@@ -1512,7 +1646,6 @@ Partial Class Form9
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Panel16 As Panel
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Panel18 As Panel
@@ -1579,7 +1712,6 @@ Partial Class Form9
     Friend WithEvents Panel22 As Panel
     Friend WithEvents Label35 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents Panel23 As Panel
     Friend WithEvents Label37 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label47 As Label
@@ -1606,4 +1738,15 @@ Partial Class Form9
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents CartList As ListBox
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
 End Class

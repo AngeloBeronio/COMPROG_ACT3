@@ -12,7 +12,6 @@
     Dim schoolServiceFee As Decimal = 5000D
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         ApplyNavHover(Button2)
         ApplyNavHover(Button3)
         ApplyNavHover(Button4)

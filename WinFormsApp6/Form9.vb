@@ -1,5 +1,18 @@
 ﻿Public Class Form9
+
+
     Public DiscountRate As Decimal = 0D
+    Private Class CartItem
+        Public checkBox As CheckBox
+        Public quantityUpDown As NumericUpDown
+        Public itemName As String
+        Public unitPrice As Decimal
+    End Class
+
+
+    Private cartItems As New List(Of CartItem)
+    Private currentTotal As Decimal = 0D
+
     Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ApplyNavHover(Button2)
         ApplyNavHover(Button3)
@@ -24,15 +37,6 @@
         UpdateCart()
     End Sub
 
-    Private Class CartItem
-        Public checkBox As CheckBox
-        Public quantityUpDown As NumericUpDown
-        Public itemName As String
-        Public unitPrice As Decimal
-    End Class
-
-    Private cartItems As New List(Of CartItem)
-
     Private Sub UpdateQuantityStates()
         For Each item In cartItems
             item.quantityUpDown.Enabled = item.checkBox.Checked
@@ -50,12 +54,25 @@
                 subtotal += itemSubtotal
             End If
         Next
-        Dim discountAmount As Decimal = subtotal * DiscountRate
-        Dim finalTotal As Decimal = subtotal - discountAmount
 
-        Label35.Text = "Total: ₱" & finalTotal.ToString("N2")
+        Dim discountAmount As Decimal = subtotal * DiscountRate
+        currentTotal = subtotal - discountAmount
+
+        Label35.Text = "Total: ₱" & currentTotal.ToString("N2")
     End Sub
 
+    Private Sub CalculateChange()
+        Dim cashGiven As Decimal = 0D
+        Decimal.TryParse(TextBox1.Text, cashGiven)
+
+        Dim change As Decimal = cashGiven - currentTotal
+
+        If change >= 0 Then
+            Label51.Text = "Change: ₱" & change.ToString("N2")
+        Else
+            Label51.Text = "Change: ₱0.00"
+        End If
+    End Sub
     Private Sub CheckBoxes_CheckedChanged(sender As Object, e As EventArgs) _
         Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged, CheckBox3.CheckedChanged,
                 CheckBox4.CheckedChanged, CheckBox5.CheckedChanged, CheckBox6.CheckedChanged,
@@ -75,9 +92,20 @@
         UpdateCart()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Hide()
-        Form5.Show()
+
+        Dim cashGiven As Decimal = 0D
+        Decimal.TryParse(TextBox1.Text, cashGiven)
+
+        If cashGiven < currentTotal Then
+            MessageBox.Show("Insufficient cash!", "Payment Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim change As Decimal = cashGiven - currentTotal
+        Label51.Text = "₱" & change.ToString("N2")
     End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Hide()
         Form3.Show()
@@ -94,4 +122,9 @@
         Hide()
         Form7.Show()
     End Sub
+
+    Private Sub Label51_Click(sender As Object, e As EventArgs) Handles Label51.Click
+
+    End Sub
+
 End Class

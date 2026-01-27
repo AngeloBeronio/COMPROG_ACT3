@@ -191,6 +191,7 @@ Partial Class Form1
         ' Button1
         ' 
         Button1.BackColor = Color.DodgerBlue
+        Button1.Cursor = Cursors.Hand
         Button1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(139, 406)
@@ -206,6 +207,7 @@ Partial Class Form1
         TextBox1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(82, 320)
         TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "e.g. XX-XXXX-XX"
         TextBox1.Size = New Size(292, 33)
         TextBox1.TabIndex = 0
         ' 

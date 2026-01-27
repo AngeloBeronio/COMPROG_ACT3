@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class Form7
+﻿Public Class Form7
     Dim frm9 As New Form9()
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -65,6 +63,6 @@ Public Class Form7
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Hide()
-        Form5.Show()
+        Form6.Show()
     End Sub
 End Class

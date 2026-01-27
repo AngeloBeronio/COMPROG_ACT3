@@ -330,7 +330,7 @@ Partial Class Form7
         ' 
         TextBox6.Location = New Point(28, 505)
         TextBox6.Name = "TextBox6"
-        TextBox6.PlaceholderText = "e.g. +63 (XXX) XXX-XXXX"
+        TextBox6.PlaceholderText = "e.g. +63 (928) 556-2075"
         TextBox6.Size = New Size(388, 23)
         TextBox6.TabIndex = 18
         ' 
@@ -417,13 +417,13 @@ Partial Class Form7
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 18.25F, FontStyle.Bold)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(18, 15)
+        Label8.Location = New Point(14, 16)
         Label8.Name = "Label8"
-        Label8.Size = New Size(173, 37)
+        Label8.Size = New Size(180, 35)
         Label8.TabIndex = 10
-        Label8.Text = "APPLY NOW"
+        Label8.Text = "ENROLL NOW"
         ' 
         ' Button2
         ' 

@@ -206,6 +206,7 @@ Partial Class Form8
         ' Button1
         ' 
         Button1.BackColor = Color.DodgerBlue
+        Button1.Cursor = Cursors.Hand
         Button1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(543, 484)
@@ -219,6 +220,7 @@ Partial Class Form8
         ' 
         TextBox7.Location = New Point(504, 150)
         TextBox7.Name = "TextBox7"
+        TextBox7.PlaceholderText = "e.g., 10"
         TextBox7.Size = New Size(188, 23)
         TextBox7.TabIndex = 20
         ' 
@@ -226,6 +228,7 @@ Partial Class Form8
         ' 
         TextBox6.Location = New Point(36, 221)
         TextBox6.Name = "TextBox6"
+        TextBox6.PlaceholderText = "e.g. +63 (928) 556-2075"
         TextBox6.Size = New Size(388, 23)
         TextBox6.TabIndex = 18
         ' 
@@ -233,6 +236,7 @@ Partial Class Form8
         ' 
         TextBox5.Location = New Point(36, 150)
         TextBox5.Name = "TextBox5"
+        TextBox5.PlaceholderText = "e.g. example@domain.com"
         TextBox5.Size = New Size(388, 23)
         TextBox5.TabIndex = 18
         ' 
@@ -240,6 +244,7 @@ Partial Class Form8
         ' 
         TextBox3.Location = New Point(536, 68)
         TextBox3.Name = "TextBox3"
+        TextBox3.PlaceholderText = "santos"
         TextBox3.Size = New Size(165, 23)
         TextBox3.TabIndex = 2
         ' 
@@ -247,6 +252,7 @@ Partial Class Form8
         ' 
         TextBox2.Location = New Point(272, 68)
         TextBox2.Name = "TextBox2"
+        TextBox2.PlaceholderText = "Juan"
         TextBox2.Size = New Size(217, 23)
         TextBox2.TabIndex = 1
         ' 
@@ -254,6 +260,7 @@ Partial Class Form8
         ' 
         TextBox1.Location = New Point(33, 68)
         TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "Dela Cruz"
         TextBox1.Size = New Size(193, 23)
         TextBox1.TabIndex = 0
         ' 

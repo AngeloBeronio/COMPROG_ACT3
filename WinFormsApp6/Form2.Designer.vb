@@ -1002,13 +1002,13 @@ Partial Class Form2
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
         Label8.Cursor = Cursors.Hand
-        Label8.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 18.25F, FontStyle.Bold)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(18, 15)
+        Label8.Location = New Point(14, 17)
         Label8.Name = "Label8"
-        Label8.Size = New Size(173, 37)
+        Label8.Size = New Size(180, 35)
         Label8.TabIndex = 10
-        Label8.Text = "APPLY NOW"
+        Label8.Text = "ENROLL NOW"
         ' 
         ' Button2
         ' 

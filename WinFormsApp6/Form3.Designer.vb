@@ -116,7 +116,7 @@ Partial Class Form3
         Button5.Name = "Button5"
         Button5.Size = New Size(184, 80)
         Button5.TabIndex = 27
-        Button5.Text = "CALENDAR"
+        Button5.Text = "LIBRARY"
         Button5.UseVisualStyleBackColor = False
         ' 
         ' Button4
@@ -189,7 +189,7 @@ Partial Class Form3
         Panel6.Controls.Add(PictureBox4)
         Panel6.Controls.Add(Label11)
         Panel6.Controls.Add(Label10)
-        Panel6.Location = New Point(1, 928)
+        Panel6.Location = New Point(1, 940)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(1904, 124)
         Panel6.TabIndex = 9
@@ -236,7 +236,7 @@ Partial Class Form3
         Panel7.Controls.Add(Label1)
         Panel7.Location = New Point(1, 143)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(1052, 430)
+        Panel7.Size = New Size(1080, 430)
         Panel7.TabIndex = 16
         ' 
         ' Panel3
