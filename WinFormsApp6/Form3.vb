@@ -21,7 +21,7 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Hide()
-        Form6.Show()
+        Form10.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -35,9 +35,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Process.Start(New ProcessStartInfo(
-            "https://www.facebook.com/integratedmontessoricenter") With {
-            .UseShellExecute = True
-        })
+        Me.Hide()
+        Form11.Show()
     End Sub
 End Class

@@ -1,5 +1,25 @@
 ﻿Public Class Form6
-    Dim total As Double
+
+    Dim MaxBorrow As Integer = 5
+    Dim BorrowDays As Integer = 1
+
+    Public Class Book
+        Public Property ID As Integer
+        Public Property Title As String
+        Public Property Author As String
+        Public Property Category As String
+        Public Property IsAvailable As Boolean
+
+        Public Sub New(id As Integer, title As String, author As String, category As String, available As Boolean)
+            Me.ID = id
+            Me.Title = title
+            Me.Author = author
+            Me.Category = category
+            Me.IsAvailable = available
+        End Sub
+    End Class
+
+    Private AllBooks As New List(Of Book)
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ApplyNavHover(Button2)
@@ -8,190 +28,316 @@
 
         ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
         ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
-        DataGridView1.ColumnCount = 5
 
+        DataGridView1.ColumnCount = 5
+        DataGridView1.Columns(0).Name = "ID"
+        DataGridView1.Columns(1).Name = "Name"
+        DataGridView1.Columns(2).Name = "Author"
+        DataGridView1.Columns(3).Name = "Category"
+        DataGridView1.Columns(4).Name = "Status"
+        DataGridView1.ReadOnly = True
+        DataGridView1.AllowUserToAddRows = False
+
+        CheckedListBox1.Items.Clear()
         For i As Integer = 1 To 140
             CheckedListBox1.Items.Add(i)
         Next
 
-        DataGridView1.Columns(0).Name = "ID"
-        DataGridView1.Columns(1).Name = "Name"
-        DataGridView1.Columns(2).Name = "Author"
-        DataGridView1.Columns(3).Name = "Categories"
-        DataGridView1.Columns(4).Name = "Available"
+        LoadBooks()
 
-    End Sub
-    Private Sub radioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(1, "Elementary Algebra", "Harold R. Jacobs", "Math", 5)
-        DataGridView1.Rows.Add(2, "College Algebra", "Ron Larson", "Math", 4)
-        DataGridView1.Rows.Add(3, "Basic Mathematics", "Serge Lang", "Math", 6)
-        DataGridView1.Rows.Add(4, "Calculus Made Easy", "Silvanus P. Thompson", "Math", 3)
-        DataGridView1.Rows.Add(5, "Calculus: Early Transcendentals", "James Stewart", "Math", 2)
-        DataGridView1.Rows.Add(6, "Geometry Essentials", "John A. Van de Walle", "Math", 5)
-        DataGridView1.Rows.Add(7, "Trigonometry", "Cynthia Y. Young", "Math", 4)
-        DataGridView1.Rows.Add(8, "Linear Algebra", "David C. Lay", "Math", 3)
-        DataGridView1.Rows.Add(9, "Discrete Mathematics", "Kenneth H. Rosen", "Math", 4)
-        DataGridView1.Rows.Add(10, "Probability and Statistics", "Morris H. DeGroot", "Math", 2)
-        DataGridView1.Rows.Add(11, "Advanced Algebra", "Anthony W. Knapp", "Math", 3)
-        DataGridView1.Rows.Add(12, "Applied Mathematics", "J. David Logan", "Math", 4)
-        DataGridView1.Rows.Add(13, "Engineering Mathematics", "K. A. Stroud", "Math", 5)
-        DataGridView1.Rows.Add(14, "Modern Mathematics", "Ian Stewart", "Math", 3)
+        For Each cb As CheckBox In Panel7.Controls.OfType(Of CheckBox)()
+            cb.Checked = True
+        Next
+
+        LoadSelectedCategories()
     End Sub
 
-    Private Sub radioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(15, "General Science", "Paul G. Hewitt", "Science", 5)
-        DataGridView1.Rows.Add(16, "Physics for Beginners", "Louis A. Bloomfield", "Science", 3)
-        DataGridView1.Rows.Add(17, "Physics for Scientists and Engineers", "Raymond A. Serway", "Science", 2)
-        DataGridView1.Rows.Add(18, "Biology Today", "Cecie Starr", "Science", 5)
-        DataGridView1.Rows.Add(19, "Biology", "Neil A. Campbell", "Science", 4)
-        DataGridView1.Rows.Add(20, "Chemistry Basics", "Karen C. Timberlake", "Science", 4)
-        DataGridView1.Rows.Add(21, "Chemistry: The Central Science", "Theodore L. Brown", "Science", 3)
-        DataGridView1.Rows.Add(22, "Earth Science", "Edward J. Tarbuck", "Science", 4)
-        DataGridView1.Rows.Add(23, "Environmental Science", "G. Tyler Miller", "Science", 2)
-        DataGridView1.Rows.Add(24, "Astronomy", "Michael A. Seeds", "Science", 3)
-        DataGridView1.Rows.Add(25, "Human Anatomy", "Elaine N. Marieb", "Science", 4)
-        DataGridView1.Rows.Add(26, "Microbiology", "Joan L. Slonczewski", "Science", 3)
-        DataGridView1.Rows.Add(27, "Genetics", "Benjamin A. Pierce", "Science", 2)
-        DataGridView1.Rows.Add(28, "Marine Science", "Alan P. Trujillo", "Science", 3)
-    End Sub
-    Private Sub radioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(29, "English Grammar in Use", "Raymond Murphy", "English", 5)
-        DataGridView1.Rows.Add(30, "The Elements of Style", "William Strunk Jr. and E. B. White", "English", 4)
-        DataGridView1.Rows.Add(31, "Practical English Usage", "Michael Swan", "English", 3)
-        DataGridView1.Rows.Add(32, "Reading Comprehension Skills", "Harvey S. Wiener", "English", 4)
-        DataGridView1.Rows.Add(33, "To Kill a Mockingbird", "Nelle Harper Lee", "English", 5)
-        DataGridView1.Rows.Add(34, "Romeo and Juliet", "William Shakespeare", "English", 6)
-        DataGridView1.Rows.Add(35, "The Great Gatsby", "Francis Scott Key Fitzgerald", "English", 3)
-        DataGridView1.Rows.Add(36, "1984", "George Orwell", "English", 4)
-        DataGridView1.Rows.Add(37, "Animal Farm", "George Orwell", "English", 5)
-        DataGridView1.Rows.Add(38, "Of Mice and Men", "John Steinbeck", "English", 3)
-        DataGridView1.Rows.Add(39, "The Catcher in the Rye", "Jerome David Salinger", "English", 2)
-        DataGridView1.Rows.Add(40, "Lord of the Flies", "William Golding", "English", 4)
-        DataGridView1.Rows.Add(41, "Macbeth", "William Shakespeare", "English", 3)
-        DataGridView1.Rows.Add(42, "Pride and Prejudice", "Jane Austen", "English", 5)
-    End Sub
-    Private Sub radioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(43, "Noli Me Tangere", "José Protasio Rizal Mercado y Alonso Realonda", "Filipino", 5)
-        DataGridView1.Rows.Add(44, "El Filibusterismo", "José Protasio Rizal Mercado y Alonso Realonda", "Filipino", 4)
-        DataGridView1.Rows.Add(45, "Florante at Laura", "Francisco Balagtas y de la Cruz", "Filipino", 3)
-        DataGridView1.Rows.Add(46, "Ibong Adarna", "Anonymous", "Filipino", 6)
-        DataGridView1.Rows.Add(47, "Banaag at Sikat", "Lope K. Santos", "Filipino", 3)
-        DataGridView1.Rows.Add(48, "Mga Ibong Mandaragit", "Amado V. Hernandez", "Filipino", 4)
-        DataGridView1.Rows.Add(49, "Dekada ’70", "Lualhati Bautista", "Filipino", 5)
-        DataGridView1.Rows.Add(50, "Sa mga Kuko ng Liwanag", "Edgardo M. Reyes", "Filipino", 4)
-        DataGridView1.Rows.Add(51, "Luha ng Buwaya", "Amado V. Hernandez", "Filipino", 3)
-        DataGridView1.Rows.Add(52, "Ang Pagong at ang Matsing", "Jose Rizal", "Filipino", 6)
-        DataGridView1.Rows.Add(53, "Alamat ng Pinya", "Anonymous", "Filipino", 5)
-        DataGridView1.Rows.Add(54, "Alamat ng Sampaguita", "Anonymous", "Filipino", 4)
-        DataGridView1.Rows.Add(55, "Florante at Laura (Illustrated)", "Francisco Balagtas", "Filipino", 2)
-        DataGridView1.Rows.Add(56, "Balarila ng Wikang Filipino", "Lope K. Santos", "Filipino", 3)
-    End Sub
-    Private Sub radioButton5_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton5.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(57, "Health Today", "John W. Santrock", "Health", 5)
-        DataGridView1.Rows.Add(58, "Physical Education Essentials", "Deborah A. Wuest", "Health", 4)
-        DataGridView1.Rows.Add(59, "Nutrition Basics", "Judith E. Brown", "Health", 6)
-        DataGridView1.Rows.Add(60, "Mental Health Awareness", "James Morrison", "Health", 3)
-        DataGridView1.Rows.Add(61, "Human Wellness", "Travis Heath", "Health", 4)
-        DataGridView1.Rows.Add(62, "Healthy Living", "William C. Shiel Jr.", "Health", 5)
-        DataGridView1.Rows.Add(63, "First Aid Manual", "American Red Cross", "Health", 6)
-        DataGridView1.Rows.Add(64, "Personal Fitness", "Charles B. Corbin", "Health", 3)
-        DataGridView1.Rows.Add(65, "Stress Management", "Edward P. Sarafino", "Health", 4)
-        DataGridView1.Rows.Add(66, "Public Health 101", "Richard Riegelman", "Health", 2)
-        DataGridView1.Rows.Add(67, "Health and Safety", "Paul Insel", "Health", 5)
-        DataGridView1.Rows.Add(68, "Teen Health", "Glencoe McGraw-Hill", "Health", 4)
-        DataGridView1.Rows.Add(69, "Food and Nutrition", "Sari Edelstein", "Health", 3)
-        DataGridView1.Rows.Add(70, "Mental Wellness", "Kay Redfield Jamison", "Health", 2)
-    End Sub
-    Private Sub radioButton7_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton7.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(71, "Geography of the World", "H. J. de Blij", "Geography", 5)
-        DataGridView1.Rows.Add(72, "Human Geography", "Alexander B. Murphy", "Geography", 4)
-        DataGridView1.Rows.Add(73, "Physical Geography", "James F. Petersen", "Geography", 3)
-        DataGridView1.Rows.Add(74, "World Atlas", "National Geographic Society", "Geography", 6)
-        DataGridView1.Rows.Add(75, "Cultural Geography", "Paul Knox", "Geography", 3)
-        DataGridView1.Rows.Add(76, "Economic Geography", "Gordon L. Clark", "Geography", 4)
-        DataGridView1.Rows.Add(77, "Population Geography", "John I. Clarke", "Geography", 2)
-        DataGridView1.Rows.Add(78, "Urban Geography", "Tim Hall", "Geography", 4)
-        DataGridView1.Rows.Add(79, "Environmental Geography", "Andrew Goudie", "Geography", 3)
-        DataGridView1.Rows.Add(80, "Climate Change Geography", "David E. Alexander", "Geography", 2)
-        DataGridView1.Rows.Add(81, "Maps and Mapping", "Jerry Brotton", "Geography", 5)
-        DataGridView1.Rows.Add(82, "Geopolitics", "Gearóid Ó Tuathail", "Geography", 3)
-        DataGridView1.Rows.Add(83, "Earth Landscapes", "Michael Summerfield", "Geography", 4)
-        DataGridView1.Rows.Add(84, "Regional Geography", "Peter Haggett", "Geography", 2)
-    End Sub
-    Private Sub radioButton6_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton6.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(85, "Philippine History", "Teodoro A. Agoncillo", "History", 5)
-        DataGridView1.Rows.Add(86, "World History", "Howard Spodek", "History", 4)
-        DataGridView1.Rows.Add(87, "History of the Filipino People", "Teodoro A. Agoncillo", "History", 3)
-        DataGridView1.Rows.Add(88, "Asian Civilizations", "Norman Lowe", "History", 4)
-        DataGridView1.Rows.Add(89, "A Short History of the Philippines", "Renato Constantino", "History", 5)
-        DataGridView1.Rows.Add(90, "The Philippines: A Past Revisited", "Renato Constantino", "History", 2)
-        DataGridView1.Rows.Add(91, "The Rise and Fall of Great Powers", "Paul Kennedy", "History", 3)
-        DataGridView1.Rows.Add(92, "Guns, Germs, and Steel", "Jared Diamond", "History", 4)
-        DataGridView1.Rows.Add(93, "Sapiens: A Brief History of Humankind", "Yuval Noah Harari", "History", 5)
-        DataGridView1.Rows.Add(94, "The Cold War", "John Lewis Gaddis", "History", 3)
-        DataGridView1.Rows.Add(95, "Medieval Europe", "Chris Wickham", "History", 2)
-        DataGridView1.Rows.Add(96, "Modern World History", "Ben Walsh", "History", 4)
-        DataGridView1.Rows.Add(97, "Ancient Civilizations", "Charles Freeman", "History", 3)
-        DataGridView1.Rows.Add(98, "Contemporary History", "Geoff Stewart", "History", 2)
-    End Sub
-    Private Sub radioButton8_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton8.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(99, "Oxford English Dictionary 2025", "Oxford University Press", "Dictionary", 5)
-        DataGridView1.Rows.Add(100, "Merriam-Webster Dictionary 2024", "Merriam-Webster Inc.", "Dictionary", 4)
-        DataGridView1.Rows.Add(101, "Cambridge English Dictionary", "Cambridge University Press", "Dictionary", 3)
-        DataGridView1.Rows.Add(102, "Collins English Dictionary", "HarperCollins Publishers", "Dictionary", 4)
-        DataGridView1.Rows.Add(103, "Longman Dictionary of Contemporary English", "Pearson Education", "Dictionary", 5)
-        DataGridView1.Rows.Add(104, "American Heritage Dictionary", "Houghton Mifflin Harcourt", "Dictionary", 3)
-        DataGridView1.Rows.Add(105, "Filipino-English Dictionary", "Leo James English", "Dictionary", 4)
-        DataGridView1.Rows.Add(106, "English-Filipino Dictionary", "Sentrong Wikang Filipino", "Dictionary", 3)
-        DataGridView1.Rows.Add(107, "Science Dictionary", "Oxford University Press", "Dictionary", 4)
-        DataGridView1.Rows.Add(108, "Mathematics Dictionary", "James & James Publishers", "Dictionary", 2)
-        DataGridView1.Rows.Add(109, "Medical Dictionary", "Dorland Publishing", "Dictionary", 3)
-        DataGridView1.Rows.Add(110, "Legal Dictionary", "Bryan A. Garner", "Dictionary", 2)
-        DataGridView1.Rows.Add(111, "Visual Dictionary", "DK Publishing", "Dictionary", 5)
-        DataGridView1.Rows.Add(112, "Children's Picture Dictionary", "Dorling Kindersley", "Dictionary", 6)
+    Private Sub LoadBooks()
+        AllBooks.Add(New Book(1, "Elementary Algebra", "Harold R. Jacobs", "Math", True))
+        AllBooks.Add(New Book(2, "College Algebra", "Ron Larson", "Math", True))
+        AllBooks.Add(New Book(3, "Basic Mathematics", "Serge Lang", "Math", True))
+        AllBooks.Add(New Book(4, "Calculus Made Easy", "Silvanus P. Thompson", "Math", True))
+        AllBooks.Add(New Book(5, "Calculus: Early Transcendentals", "James Stewart", "Math", True))
+        AllBooks.Add(New Book(6, "Geometry Essentials", "John A. Van de Walle", "Math", True))
+        AllBooks.Add(New Book(7, "Trigonometry", "Cynthia Y. Young", "Math", True))
+        AllBooks.Add(New Book(8, "Linear Algebra", "David C. Lay", "Math", True))
+        AllBooks.Add(New Book(9, "Discrete Mathematics", "Kenneth H. Rosen", "Math", True))
+        AllBooks.Add(New Book(10, "Probability and Statistics", "Morris H. DeGroot", "Math", True))
+        AllBooks.Add(New Book(11, "Advanced Algebra", "Anthony W. Knapp", "Math", True))
+        AllBooks.Add(New Book(12, "Applied Mathematics", "J. David Logan", "Math", True))
+        AllBooks.Add(New Book(13, "Engineering Mathematics", "K. A. Stroud", "Math", True))
+        AllBooks.Add(New Book(14, "Modern Mathematics", "Ian Stewart", "Math", True))
+        '
+        AllBooks.Add(New Book(15, "General Science", "Paul G. Hewitt", "Science", True))
+        AllBooks.Add(New Book(16, "Physics for Beginners", "Louis A. Bloomfield", "Science", True))
+        AllBooks.Add(New Book(17, "Physics for Scientists and Engineers", "Raymond A. Serway", "Science", True))
+        AllBooks.Add(New Book(18, "Biology Today", "Cecie Starr", "Science", True))
+        AllBooks.Add(New Book(19, "Biology", "Neil A. Campbell", "Science", True))
+        AllBooks.Add(New Book(20, "Chemistry Basics", "Karen C. Timberlake", "Science", True))
+        AllBooks.Add(New Book(21, "Chemistry: The Central Science", "Theodore L. Brown", "Science", True))
+        AllBooks.Add(New Book(22, "Earth Science", "Edward J. Tarbuck", "Science", True))
+        AllBooks.Add(New Book(23, "Environmental Science", "G. Tyler Miller", "Science", True))
+        AllBooks.Add(New Book(24, "Astronomy", "Michael A. Seeds", "Science", True))
+        AllBooks.Add(New Book(25, "Human Anatomy", "Elaine N. Marieb", "Science", True))
+        AllBooks.Add(New Book(26, "Microbiology", "Joan L. Slonczewski", "Science", True))
+        AllBooks.Add(New Book(27, "Genetics", "Benjamin A. Pierce", "Science", True))
+        AllBooks.Add(New Book(28, "Marine Science", "Alan A. Trujillo", "Science", True))
+        '
+        AllBooks.Add(New Book(29, "English Grammar in Use", "Raymond Murphy", "English", True))
+        AllBooks.Add(New Book(30, "The Elements of Style", "William Strunk Jr.", "English", True))
+        AllBooks.Add(New Book(31, "Practical English Usage", "Michael Swan", "English", True))
+        AllBooks.Add(New Book(32, "Reading Comprehension Skills", "Harvey S. Wiener", "English", True))
+        AllBooks.Add(New Book(33, "To Kill a Mockingbird", "Harper Lee", "English", True))
+        AllBooks.Add(New Book(34, "Romeo and Juliet", "William Shakespeare", "English", True))
+        AllBooks.Add(New Book(35, "The Great Gatsby", "F. Scott Fitzgerald", "English", True))
+        AllBooks.Add(New Book(36, "1984", "George Orwell", "English", True))
+        AllBooks.Add(New Book(37, "Animal Farm", "George Orwell", "English", True))
+        AllBooks.Add(New Book(38, "Of Mice and Men", "John Steinbeck", "English", True))
+        AllBooks.Add(New Book(39, "The Catcher in the Rye", "J. D. Salinger", "English", True))
+        AllBooks.Add(New Book(40, "Lord of the Flies", "William Golding", "English", True))
+        AllBooks.Add(New Book(41, "Macbeth", "William Shakespeare", "English", True))
+        AllBooks.Add(New Book(42, "Pride and Prejudice", "Jane Austen", "English", True))
+        '
+        AllBooks.Add(New Book(43, "Noli Me Tangere", "Jose Rizal", "Filipino", True))
+        AllBooks.Add(New Book(44, "El Filibusterismo", "Jose Rizal", "Filipino", True))
+        AllBooks.Add(New Book(45, "Florante at Laura", "Francisco Balagtas", "Filipino", True))
+        AllBooks.Add(New Book(46, "Ibong Adarna", "Anonymous", "Filipino", True))
+        AllBooks.Add(New Book(47, "Banaag at Sikat", "Lope K. Santos", "Filipino", True))
+        AllBooks.Add(New Book(48, "Mga Ibong Mandaragit", "Amado V. Hernandez", "Filipino", True))
+        AllBooks.Add(New Book(49, "Dekada ’70", "Lualhati Bautista", "Filipino", True))
+        AllBooks.Add(New Book(50, "Sa mga Kuko ng Liwanag", "Edgardo Reyes", "Filipino", True))
+        AllBooks.Add(New Book(51, "Luha ng Buwaya", "Amado V. Hernandez", "Filipino", True))
+        AllBooks.Add(New Book(52, "Ang Pagong at ang Matsing", "Jose Rizal", "Filipino", True))
+        AllBooks.Add(New Book(53, "Alamat ng Pinya", "Anonymous", "Filipino", True))
+        AllBooks.Add(New Book(54, "Alamat ng Sampaguita", "Anonymous", "Filipino", True))
+        AllBooks.Add(New Book(55, "Florante at Laura (Illustrated)", "Francisco Balagtas", "Filipino", True))
+        AllBooks.Add(New Book(56, "Balarila ng Wikang Filipino", "Lope K. Santos", "Filipino", True))
+        '
+        AllBooks.Add(New Book(57, "Health Today", "John W. Santrock", "Health", True))
+        AllBooks.Add(New Book(58, "Physical Education Essentials", "Deborah A. Wuest", "Health", True))
+        AllBooks.Add(New Book(59, "Nutrition Basics", "Judith E. Brown", "Health", True))
+        AllBooks.Add(New Book(60, "Mental Health Awareness", "James Morrison", "Health", True))
+        AllBooks.Add(New Book(61, "Human Wellness", "Travis Heath", "Health", True))
+        AllBooks.Add(New Book(62, "Healthy Living", "William C. Shiel Jr.", "Health", True))
+        AllBooks.Add(New Book(63, "First Aid Manual", "American Red Cross", "Health", True))
+        AllBooks.Add(New Book(64, "Personal Fitness", "Charles B. Corbin", "Health", True))
+        AllBooks.Add(New Book(65, "Stress Management", "Edward P. Sarafino", "Health", True))
+        AllBooks.Add(New Book(66, "Public Health 101", "Richard Riegelman", "Health", True))
+        AllBooks.Add(New Book(67, "Health and Safety", "Paul Insel", "Health", True))
+        AllBooks.Add(New Book(68, "Teen Health", "Glencoe McGraw-Hill", "Health", True))
+        AllBooks.Add(New Book(69, "Food and Nutrition", "Sari Edelstein", "Health", True))
+        AllBooks.Add(New Book(70, "Mental Wellness", "Kay Redfield Jamison", "Health", True))
+        '
+        AllBooks.Add(New Book(71, "Geography of the World", "H. J. de Blij", "Geography", True))
+        AllBooks.Add(New Book(72, "Human Geography", "Alexander B. Murphy", "Geography", True))
+        AllBooks.Add(New Book(73, "Physical Geography", "James F. Petersen", "Geography", True))
+        AllBooks.Add(New Book(74, "World Atlas", "National Geographic Society", "Geography", True))
+        AllBooks.Add(New Book(75, "Cultural Geography", "Paul Knox", "Geography", True))
+        AllBooks.Add(New Book(76, "Economic Geography", "Gordon L. Clark", "Geography", True))
+        AllBooks.Add(New Book(77, "Population Geography", "John I. Clarke", "Geography", True))
+        AllBooks.Add(New Book(78, "Urban Geography", "Tim Hall", "Geography", True))
+        AllBooks.Add(New Book(79, "Environmental Geography", "Andrew Goudie", "Geography", True))
+        AllBooks.Add(New Book(80, "Climate Change Geography", "David E. Alexander", "Geography", True))
+        AllBooks.Add(New Book(81, "Maps and Mapping", "Jerry Brotton", "Geography", True))
+        AllBooks.Add(New Book(82, "Geopolitics", "Gearóid Ó Tuathail", "Geography", True))
+        AllBooks.Add(New Book(83, "Earth Landscapes", "Michael Summerfield", "Geography", True))
+        AllBooks.Add(New Book(84, "Regional Geography", "Peter Haggett", "Geography", True))
+        '
+        AllBooks.Add(New Book(85, "Philippine History", "Teodoro A. Agoncillo", "History", True))
+        AllBooks.Add(New Book(86, "World History", "Howard Spodek", "History", True))
+        AllBooks.Add(New Book(87, "History of the Filipino People", "Teodoro A. Agoncillo", "History", True))
+        AllBooks.Add(New Book(88, "Asian Civilizations", "Norman Lowe", "History", True))
+        AllBooks.Add(New Book(89, "A Short History of the Philippines", "Renato Constantino", "History", True))
+        AllBooks.Add(New Book(90, "The Philippines: A Past Revisited", "Renato Constantino", "History", True))
+        AllBooks.Add(New Book(91, "The Rise and Fall of Great Powers", "Paul Kennedy", "History", True))
+        AllBooks.Add(New Book(92, "Guns, Germs, and Steel", "Jared Diamond", "History", True))
+        AllBooks.Add(New Book(93, "Sapiens", "Yuval Noah Harari", "History", True))
+        AllBooks.Add(New Book(94, "The Cold War", "John Lewis Gaddis", "History", True))
+        AllBooks.Add(New Book(95, "Medieval Europe", "Chris Wickham", "History", True))
+        AllBooks.Add(New Book(96, "Modern World History", "Ben Walsh", "History", True))
+        AllBooks.Add(New Book(97, "Ancient Civilizations", "Charles Freeman", "History", True))
+        AllBooks.Add(New Book(98, "Contemporary History", "Geoff Stewart", "History", True))
+        '
+        AllBooks.Add(New Book(99, "Oxford English Dictionary 2025", "Oxford University Press", "Dictionary", True))
+        AllBooks.Add(New Book(100, "Merriam-Webster Dictionary 2024", "Merriam-Webster", "Dictionary", True))
+        AllBooks.Add(New Book(101, "Cambridge English Dictionary", "Cambridge University Press", "Dictionary", True))
+        AllBooks.Add(New Book(102, "Collins English Dictionary", "HarperCollins", "Dictionary", True))
+        AllBooks.Add(New Book(103, "Longman Dictionary", "Pearson", "Dictionary", True))
+        AllBooks.Add(New Book(104, "American Heritage Dictionary", "Houghton Mifflin", "Dictionary", True))
+        AllBooks.Add(New Book(105, "Filipino-English Dictionary", "Leo James English", "Dictionary", True))
+        AllBooks.Add(New Book(106, "English-Filipino Dictionary", "SWF", "Dictionary", True))
+        AllBooks.Add(New Book(107, "Science Dictionary", "Oxford University Press", "Dictionary", True))
+        AllBooks.Add(New Book(108, "Mathematics Dictionary", "James & James", "Dictionary", True))
+        AllBooks.Add(New Book(109, "Medical Dictionary", "Dorland", "Dictionary", True))
+        AllBooks.Add(New Book(110, "Legal Dictionary", "Bryan A. Garner", "Dictionary", True))
+        AllBooks.Add(New Book(111, "Visual Dictionary", "DK Publishing", "Dictionary", True))
+        AllBooks.Add(New Book(112, "Children's Picture Dictionary", "DK", "Dictionary", True))
+        '
+        AllBooks.Add(New Book(113, "Chess Set", "", "Board Game", True))
+        AllBooks.Add(New Book(114, "Scrabble", "", "Board Game", True))
+        AllBooks.Add(New Book(115, "Checkers", "", "Board Game", True))
+        AllBooks.Add(New Book(116, "Monopoly", "", "Board Game", True))
+        AllBooks.Add(New Book(117, "Uno", "", "Board Game", True))
+        AllBooks.Add(New Book(118, "Clue", "", "Board Game", True))
+        AllBooks.Add(New Book(119, "Risk", "", "Board Game", True))
+        AllBooks.Add(New Book(120, "Battleship", "", "Board Game", True))
+        AllBooks.Add(New Book(121, "Connect Four", "", "Board Game", True))
+        AllBooks.Add(New Book(122, "Jenga", "", "Board Game", True))
+        AllBooks.Add(New Book(123, "Snakes and Ladders", "", "Board Game", True))
+        AllBooks.Add(New Book(124, "Ludo", "", "Board Game", True))
+        AllBooks.Add(New Book(125, "Othello", "", "Board Game", True))
+        AllBooks.Add(New Book(126, "Backgammon", "", "Board Game", True))
+        '
+        AllBooks.Add(New Book(127, "Pencil Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(128, "Color Pencils", "", "Drawing Material", True))
+        AllBooks.Add(New Book(129, "Charcoal Pencils", "", "Drawing Material", True))
+        AllBooks.Add(New Book(130, "Graphite Sticks", "", "Drawing Material", True))
+        AllBooks.Add(New Book(131, "Watercolor Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(132, "Acrylic Paint Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(133, "Oil Pastels", "", "Drawing Material", True))
+        AllBooks.Add(New Book(134, "Sketch Pad", "", "Drawing Material", True))
+        AllBooks.Add(New Book(135, "Drawing Board", "", "Drawing Material", True))
+        AllBooks.Add(New Book(136, "Brush Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(137, "Ink Pens", "", "Drawing Material", True))
+        AllBooks.Add(New Book(138, "Eraser Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(139, "Ruler and Compass Set", "", "Drawing Material", True))
+        AllBooks.Add(New Book(140, "Calligraphy Pens", "", "Drawing Material", True))
     End Sub
 
-    Private Sub radioButton9_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton9.CheckedChanged
+
+    Private Sub LoadSelectedCategories()
         DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(113, "Chess Set", "", "Board Game", 6)
-        DataGridView1.Rows.Add(114, "Scrabble", "", "Board Game", 5)
-        DataGridView1.Rows.Add(115, "Checkers", "", "Board Game", 4)
-        DataGridView1.Rows.Add(116, "Monopoly", "", "Board Game", 3)
-        DataGridView1.Rows.Add(117, "Uno", "", "Board Game", 6)
-        DataGridView1.Rows.Add(118, "Clue", "", "Board Game", 2)
-        DataGridView1.Rows.Add(119, "Risk", "", "Board Game", 3)
-        DataGridView1.Rows.Add(120, "Battleship", "", "Board Game", 4)
-        DataGridView1.Rows.Add(121, "Connect Four", "", "Board Game", 5)
-        DataGridView1.Rows.Add(122, "Jenga", "", "Board Game", 6)
-        DataGridView1.Rows.Add(123, "Snakes and Ladders", "", "Board Game", 5)
-        DataGridView1.Rows.Add(124, "Ludo", "", "Board Game", 4)
-        DataGridView1.Rows.Add(125, "Othello", "", "Board Game", 3)
-        DataGridView1.Rows.Add(126, "Backgammon", "", "Board Game", 2)
+
+        Dim selectedCategories As New List(Of String)
+
+        If CheckBox1.Checked Then selectedCategories.Add("Math")
+        If CheckBox2.Checked Then selectedCategories.Add("Science")
+        If CheckBox3.Checked Then selectedCategories.Add("English")
+        If CheckBox4.Checked Then selectedCategories.Add("Filipino")
+        If CheckBox5.Checked Then selectedCategories.Add("Health")
+        If CheckBox6.Checked Then selectedCategories.Add("Geography")
+        If CheckBox7.Checked Then selectedCategories.Add("History")
+        If CheckBox8.Checked Then selectedCategories.Add("Dictionary")
+        If CheckBox9.Checked Then selectedCategories.Add("Board Game")
+        If CheckBox10.Checked Then selectedCategories.Add("Drawing Material")
+
+        For Each b In AllBooks
+            If selectedCategories.Contains(b.Category) Then
+                Dim statusText As String = If(b.IsAvailable, "Available", "Unavailable")
+                DataGridView1.Rows.Add(b.ID, b.Title, b.Author, b.Category, statusText)
+            End If
+        Next
     End Sub
-    Private Sub radioButton10_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton10.CheckedChanged
-        DataGridView1.Rows.Clear()
-        DataGridView1.Rows.Add(127, "Pencil Set", "", "Drawing Material", 10)
-        DataGridView1.Rows.Add(128, "Color Pencils", "", "Drawing Material", 8)
-        DataGridView1.Rows.Add(129, "Charcoal Pencils", "", "Drawing Material", 6)
-        DataGridView1.Rows.Add(130, "Graphite Sticks", "", "Drawing Material", 5)
-        DataGridView1.Rows.Add(131, "Watercolor Set", "", "Drawing Material", 4)
-        DataGridView1.Rows.Add(132, "Acrylic Paint Set", "", "Drawing Material", 3)
-        DataGridView1.Rows.Add(133, "Oil Pastels", "", "Drawing Material", 6)
-        DataGridView1.Rows.Add(134, "Sketch Pad", "", "Drawing Material", 7)
-        DataGridView1.Rows.Add(135, "Drawing Board", "", "Drawing Material", 2)
-        DataGridView1.Rows.Add(136, "Brush Set", "", "Drawing Material", 5)
-        DataGridView1.Rows.Add(137, "Ink Pens", "", "Drawing Material", 6)
-        DataGridView1.Rows.Add(138, "Eraser Set", "", "Drawing Material", 8)
-        DataGridView1.Rows.Add(139, "Ruler and Compass Set", "", "Drawing Material", 4)
-        DataGridView1.Rows.Add(140, "Calligraphy Pens", "", "Drawing Material", 3)
+
+    Private Sub Category_CheckedChanged(sender As Object, e As EventArgs)
+        For Each cb As CheckBox In Panel7.Controls.OfType(Of CheckBox)()
+            AddHandler cb.CheckedChanged, AddressOf Category_CheckedChanged
+        Next
+
+        LoadSelectedCategories()
+    End Sub
+
+    Private Sub UpdateBorrowList()
+        ListBox1.Items.Clear()
+
+        If CheckedListBox1.CheckedItems.Count = 0 Then
+            Label14.Text = "Total Items: 0"
+            Exit Sub
+        End If
+
+        If CheckedListBox1.CheckedItems.Count > MaxBorrow Then
+            MessageBox.Show("You can only borrow up to 5 items.")
+            Exit Sub
+        End If
+
+        For Each checkedId As Integer In CheckedListBox1.CheckedItems
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                If row.IsNewRow Then Continue For
+
+                If CInt(row.Cells(0).Value) = checkedId Then
+                    If row.Cells(4).Value.ToString() = "Unavailable" Then
+                        MessageBox.Show("This item is Unavailable.")
+                        CheckedListBox1.SetItemChecked(
+                        CheckedListBox1.CheckedItems.IndexOf(checkedId),
+                        False
+                    )
+                        Exit Sub
+                    End If
+                    ListBox1.Items.Add(row.Cells(1).Value & " — " & row.Cells(3).Value)
+                    Exit For
+                End If
+            Next
+        Next
+
+        Label14.Text = "Total Items: " & CheckedListBox1.CheckedItems.Count
+    End Sub
+
+
+    Private Sub CheckedListBox1_ItemCheck(sender As Object, e As ItemCheckEventArgs) _
+        Handles CheckedListBox1.ItemCheck
+        BeginInvoke(New Action(AddressOf UpdateBorrowList))
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) _
+        Handles ListBox1.SelectedIndexChanged
+        Label14.Text = "Total Items: " & ListBox1.Items.Count
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then BorrowDays = 1
+        UpdateDueDate()
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then BorrowDays = 3
+        UpdateDueDate()
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton3.CheckedChanged
+        If RadioButton3.Checked Then BorrowDays = 7
+        UpdateDueDate()
+    End Sub
+
+    Private Sub UpdateDueDate()
+        If Not RadioButton1.Checked AndAlso
+           Not RadioButton2.Checked AndAlso
+           Not RadioButton3.Checked Then
+            Label15.Text = "Due Date: None Selected"
+            Return
+        End If
+
+        Label15.Text = "Due Date: " &
+            Date.Now.AddDays(BorrowDays).ToString("MMMM dd, yyyy")
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        For Each cb As CheckBox In Panel7.Controls.OfType(Of CheckBox)()
+            cb.Checked = False
+        Next
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        For Each checkedId As Integer In CheckedListBox1.CheckedItems
+            Dim book = AllBooks.FirstOrDefault(Function(b) b.ID = checkedId)
+            If book IsNot Nothing Then
+                book.IsAvailable = False
+            End If
+        Next
+
+        LoadSelectedCategories()
+
+        For Each rb As RadioButton In Panel12.Controls.OfType(Of RadioButton)()
+            rb.Checked = False
+        Next
+        For i As Integer = 0 To CheckedListBox1.Items.Count - 1
+            CheckedListBox1.SetItemChecked(i, False)
+        Next
+        MsgBox("Borrow request submitted!", MsgBoxStyle.Information, "Success")
+        Me.Hide()
+        Form3.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -214,40 +360,4 @@
         Form7.Show()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        If CheckedListBox1.CheckedItems.Count = 0 Then
-            MessageBox.Show("No books selected.")
-            Exit Sub
-        End If
-
-        Dim borrowed As String = ""
-
-        For Each checkedId As Integer In CheckedListBox1.CheckedItems
-
-            For Each row As DataGridViewRow In DataGridView1.Rows
-                If row.IsNewRow Then Continue For
-
-                If Convert.ToInt32(row.Cells(0).Value) = checkedId Then
-                    borrowed &= "- " & row.Cells(1).Value.ToString() & vbCrLf
-                    Exit For
-                End If
-            Next
-
-        Next
-
-        MessageBox.Show(
-            "You have borrowed:" & vbCrLf & vbCrLf & borrowed,
-            "Borrowed Books"
-        )
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
 End Class

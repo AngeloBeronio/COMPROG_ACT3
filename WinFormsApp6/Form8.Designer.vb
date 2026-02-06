@@ -342,7 +342,7 @@ Partial Class Form8
         Button5.Name = "Button5"
         Button5.Size = New Size(184, 80)
         Button5.TabIndex = 27
-        Button5.Text = "CALENDAR"
+        Button5.Text = "LIBRARY"
         Button5.UseVisualStyleBackColor = False
         ' 
         ' Button4

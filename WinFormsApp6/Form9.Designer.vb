@@ -817,7 +817,7 @@ Partial Class Form9
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Segoe UI Light", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(162, 182)
         Label2.Name = "Label2"
@@ -829,7 +829,7 @@ Partial Class Form9
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(162, 203)
         Label1.Name = "Label1"
@@ -971,7 +971,7 @@ Partial Class Form9
         ' 
         Label32.AutoSize = True
         Label32.BackColor = Color.Transparent
-        Label32.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label32.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.Black
         Label32.Location = New Point(142, 462)
         Label32.Name = "Label32"
@@ -1022,7 +1022,7 @@ Partial Class Form9
         ' 
         Label30.AutoSize = True
         Label30.BackColor = Color.Transparent
-        Label30.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.Black
         Label30.Location = New Point(142, 362)
         Label30.Name = "Label30"
@@ -1073,7 +1073,7 @@ Partial Class Form9
         ' 
         Label28.AutoSize = True
         Label28.BackColor = Color.Transparent
-        Label28.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.Black
         Label28.Location = New Point(142, 277)
         Label28.Name = "Label28"
@@ -1125,7 +1125,7 @@ Partial Class Form9
         ' 
         Label26.AutoSize = True
         Label26.BackColor = Color.Transparent
-        Label26.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.Black
         Label26.Location = New Point(142, 185)
         Label26.Name = "Label26"
@@ -1177,7 +1177,7 @@ Partial Class Form9
         ' 
         Label24.AutoSize = True
         Label24.BackColor = Color.Transparent
-        Label24.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.Black
         Label24.Location = New Point(142, 81)
         Label24.Name = "Label24"
@@ -1255,7 +1255,7 @@ Partial Class Form9
         ' 
         Label51.AutoSize = True
         Label51.BackColor = Color.Transparent
-        Label51.Font = New Font("Segoe UI", 16.0F, FontStyle.Bold)
+        Label51.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
         Label51.ForeColor = Color.Black
         Label51.Location = New Point(132, 622)
         Label51.Name = "Label51"
@@ -1291,7 +1291,7 @@ Partial Class Form9
         ' 
         Label49.AutoSize = True
         Label49.BackColor = Color.Transparent
-        Label49.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label49.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.Black
         Label49.Location = New Point(313, 495)
         Label49.Name = "Label49"
@@ -1494,7 +1494,7 @@ Partial Class Form9
         Button5.Name = "Button5"
         Button5.Size = New Size(184, 80)
         Button5.TabIndex = 27
-        Button5.Text = "CALENDAR"
+        Button5.Text = "LIBRARY"
         Button5.UseVisualStyleBackColor = False
         ' 
         ' Button3

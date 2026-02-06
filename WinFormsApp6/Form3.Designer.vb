@@ -259,7 +259,7 @@ Partial Class Form3
         Button2.Name = "Button2"
         Button2.Size = New Size(196, 69)
         Button2.TabIndex = 21
-        Button2.Text = "Follow us!"
+        Button2.Text = "Surprise Me!"
         Button2.UseVisualStyleBackColor = False
         ' 
         ' Button1

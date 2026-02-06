@@ -1,18 +1,18 @@
-﻿Public Class Form1
+﻿Public Class Form10
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ApplyNavHover(Button2)
-        ApplyNavHover(Button3)
         ApplyNavHover(Button5)
+        ApplyNavHover(Button3)
 
-        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
         ApplyColorHover(Button6, Color.White, Color.Green, Color.Green, Color.White)
+        ApplyColorHover(Button1, Color.DodgerBlue, Color.MidnightBlue, Color.White, Color.White)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim studentNo As String = TextBox1.Text.Trim()
         If LoginStudent(studentNo, Me) Then
             Me.Hide()
-            Form9.Show()
+            Form6.Show()
         End If
     End Sub
 
@@ -21,14 +21,14 @@
         Form3.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Hide()
         Form4.Show()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Hide()
-        Form6.Show()
+        Form1.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -36,7 +36,4 @@
         Form7.Show()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class
