@@ -359,5 +359,4 @@
         Hide()
         Form7.Show()
     End Sub
-
 End Class

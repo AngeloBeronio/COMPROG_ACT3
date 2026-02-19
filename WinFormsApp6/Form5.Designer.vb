@@ -248,7 +248,7 @@ Partial Class Form5
         Button3.Name = "Button3"
         Button3.Size = New Size(180, 80)
         Button3.TabIndex = 25
-        Button3.Text = "ABOUT US"
+        Button3.Text = "PORTAL"
         Button3.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1

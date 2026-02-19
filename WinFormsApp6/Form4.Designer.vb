@@ -38,9 +38,6 @@ Partial Class Form4
         PictureBox4 = New PictureBox()
         Label11 = New Label()
         Label10 = New Label()
-        Panel5 = New Panel()
-        Label4 = New Label()
-        Panel4 = New Panel()
         Panel1 = New Panel()
         Button6 = New Button()
         Button2 = New Button()
@@ -51,10 +48,10 @@ Partial Class Form4
         Label1 = New Label()
         Label5 = New Label()
         Panel3 = New Panel()
+        Button1 = New Button()
         Panel6.SuspendLayout()
         Panel7.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        Panel5.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -222,38 +219,10 @@ Partial Class Form4
         Label10.TabIndex = 0
         Label10.Text = "Integrated Montessori Center" & ChrW(8232) & "© 2026 • Privacy Policy"
         ' 
-        ' Panel5
-        ' 
-        Panel5.BackColor = Color.DodgerBlue
-        Panel5.Controls.Add(Label4)
-        Panel5.Location = New Point(891, 0)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(240, 178)
-        Panel5.TabIndex = 30
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(38, 75)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(161, 40)
-        Label4.TabIndex = 7
-        Label4.Text = "ABOUT US"
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel4.Location = New Point(887, 145)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(248, 42)
-        Panel4.TabIndex = 31
-        ' 
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.Control
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Button5)
@@ -385,6 +354,24 @@ Partial Class Form4
         Panel3.Size = New Size(1167, 544)
         Panel3.TabIndex = 34
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = SystemColors.Control
+        Button1.Cursor = Cursors.Hand
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatAppearance.MouseDownBackColor = SystemColors.Control
+        Button1.FlatAppearance.MouseOverBackColor = SystemColors.Control
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
+        Button1.ForeColor = Color.DimGray
+        Button1.Location = New Point(924, 35)
+        Button1.Margin = New Padding(0)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(180, 80)
+        Button1.TabIndex = 30
+        Button1.Text = "PORTAL"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -393,8 +380,6 @@ Partial Class Form4
         ClientSize = New Size(1904, 1041)
         Controls.Add(Label1)
         Controls.Add(Label5)
-        Controls.Add(Panel5)
-        Controls.Add(Panel4)
         Controls.Add(Panel1)
         Controls.Add(Panel7)
         Controls.Add(Panel6)
@@ -407,8 +392,6 @@ Partial Class Form4
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        Panel5.ResumeLayout(False)
-        Panel5.PerformLayout()
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -429,9 +412,6 @@ Partial Class Form4
     Friend WithEvents Label12 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button6 As Button
     Friend WithEvents Button2 As Button
@@ -442,4 +422,5 @@ Partial Class Form4
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button1 As Button
 End Class

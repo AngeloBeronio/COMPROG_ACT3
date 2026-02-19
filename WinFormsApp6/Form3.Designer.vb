@@ -54,6 +54,7 @@ Partial Class Form3
         Label14 = New Label()
         Panel5 = New Panel()
         Label4 = New Label()
+        Button7 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +73,7 @@ Partial Class Form3
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.Control
+        Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button5)
         Panel1.Controls.Add(Button4)
@@ -111,7 +113,7 @@ Partial Class Form3
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
         Button5.ForeColor = Color.DimGray
-        Button5.Location = New Point(1352, 35)
+        Button5.Location = New Point(1196, 35)
         Button5.Margin = New Padding(0)
         Button5.Name = "Button5"
         Button5.Size = New Size(184, 80)
@@ -129,7 +131,7 @@ Partial Class Form3
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
         Button4.ForeColor = Color.DimGray
-        Button4.Location = New Point(1167, 35)
+        Button4.Location = New Point(1018, 35)
         Button4.Margin = New Padding(0)
         Button4.Name = "Button4"
         Button4.Size = New Size(180, 80)
@@ -147,12 +149,12 @@ Partial Class Form3
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
         Button3.ForeColor = Color.DimGray
-        Button3.Location = New Point(983, 35)
+        Button3.Location = New Point(828, 35)
         Button3.Margin = New Padding(0)
         Button3.Name = "Button3"
         Button3.Size = New Size(180, 80)
         Button3.TabIndex = 25
-        Button3.Text = "ABOUT US"
+        Button3.Text = "PORTAL"
         Button3.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
@@ -242,7 +244,7 @@ Partial Class Form3
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(40), CByte(0), CByte(0), CByte(0))
-        Panel3.Location = New Point(722, 2)
+        Panel3.Location = New Point(553, 2)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(248, 42)
         Panel3.TabIndex = 25
@@ -259,7 +261,7 @@ Partial Class Form3
         Button2.Name = "Button2"
         Button2.Size = New Size(196, 69)
         Button2.TabIndex = 21
-        Button2.Text = "Surprise Me!"
+        Button2.Text = "Book A Tour"
         Button2.UseVisualStyleBackColor = False
         ' 
         ' Button1
@@ -274,7 +276,7 @@ Partial Class Form3
         Button1.Name = "Button1"
         Button1.Size = New Size(273, 69)
         Button1.TabIndex = 20
-        Button1.Text = "Book a School Tour"
+        Button1.Text = "About Us"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Label3
@@ -417,7 +419,7 @@ Partial Class Form3
         ' 
         Panel5.BackColor = Color.DodgerBlue
         Panel5.Controls.Add(Label4)
-        Panel5.Location = New Point(727, 0)
+        Panel5.Location = New Point(558, 0)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(240, 178)
         Panel5.TabIndex = 24
@@ -433,6 +435,24 @@ Partial Class Form3
         Label4.Size = New Size(104, 40)
         Label4.TabIndex = 7
         Label4.Text = "HOME"
+        ' 
+        ' Button7
+        ' 
+        Button7.BackColor = Color.Transparent
+        Button7.Cursor = Cursors.Hand
+        Button7.FlatAppearance.BorderSize = 0
+        Button7.FlatAppearance.MouseDownBackColor = SystemColors.Control
+        Button7.FlatAppearance.MouseOverBackColor = SystemColors.Control
+        Button7.FlatStyle = FlatStyle.Flat
+        Button7.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
+        Button7.ForeColor = Color.DimGray
+        Button7.Location = New Point(1413, 35)
+        Button7.Margin = New Padding(0)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(184, 80)
+        Button7.TabIndex = 28
+        Button7.Text = "PROGRAMS"
+        Button7.UseVisualStyleBackColor = False
         ' 
         ' Form3
         ' 
@@ -508,4 +528,5 @@ Partial Class Form3
     Friend WithEvents Button4 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button7 As Button
 End Class

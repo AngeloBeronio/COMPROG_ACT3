@@ -297,12 +297,12 @@ Partial Class Form1
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold)
         Button3.ForeColor = Color.DimGray
-        Button3.Location = New Point(884, 35)
+        Button3.Location = New Point(869, 35)
         Button3.Margin = New Padding(0)
         Button3.Name = "Button3"
         Button3.Size = New Size(180, 80)
         Button3.TabIndex = 25
-        Button3.Text = "ABOUT US"
+        Button3.Text = "PORTAL"
         Button3.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
